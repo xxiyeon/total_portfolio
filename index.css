@@ -549,50 +549,79 @@ img {
 .contact-info {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  align-items: center;
+  gap: 24px;
   margin-bottom: 40px;
+  flex-wrap: wrap;
 }
 
-.contact-info a {
+.contact-info a,
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background-color: transparent;
+  color: var(--sub-text);
+  font: inherit;
   font-size: 1.125rem;
   font-weight: 500;
-  color: var(--sub-text);
-  transition: color 0.3s ease;
-  display: flex;
-  align-items: center;
+  line-height: 1;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.contact-info a:hover,
+.contact-link:hover {
+  color: var(--main-text);
+  background-color: var(--light-sage);
+  border-color: var(--light-sage);
+  transform: translateY(-2px);
+}
+
+.contact-info a:focus-visible,
+.contact-link:focus-visible {
+  outline: none;
+  color: var(--main-text);
+  background-color: var(--light-sage);
+  border-color: var(--soft-mint);
+  box-shadow: 0 0 0 4px rgba(191, 216, 194, 0.35);
+}
+
+.contact-info a:active,
+.contact-link:active {
+  transform: translateY(0);
+}
+
+.contact-link.is-copied {
+  color: var(--main-text);
+  background-color: var(--soft-mint);
+  border-color: var(--soft-mint);
 }
 
 .contact-icon {
-  margin-right: 8px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
 }
 
-.contact-info a:hover {
-  color: var(--main-text);
+.contact-info a:hover .contact-icon,
+.contact-link:hover .contact-icon {
+  transform: translateY(-1px);
 }
 
 .copyright {
   font-size: 0.875rem;
   color: var(--sub-text);
-}
-.contact-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  border: none;
-  background: transparent;
-  color: inherit;
-  font: inherit;
-  cursor: pointer;
-  padding: 0;
-  text-decoration: none;
-}
-
-.contact-link:hover {
-  color: #1e2d24;
-}
-
-.contact-icon {
-  flex-shrink: 0;
 }
 /* ==================== Responsive ==================== */
 @media (max-width: 1024px) {
@@ -692,5 +721,10 @@ img {
   .contact-info {
     flex-direction: column;
     gap: 20px;
+  }
+
+  .contact-info a,
+  .contact-link {
+    width: fit-content;
   }
 }

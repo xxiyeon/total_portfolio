@@ -1,53 +1,122 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // 1. 모바일 햄버거 메뉴 토글 로직
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('nav-menu');
-    const navLinks = document.querySelectorAll('.nav-item');
+document.addEventListener("DOMContentLoaded", () => {
+    // ==================== Mobile Nav ====================
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("nav-menu");
+    const navLinks = document.querySelectorAll(".nav-item");
 
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('show');
-    });
-
-    // 모바일에서 링크 클릭 시 메뉴 닫기
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('show');
+    if (hamburger && navMenu) {
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("show");
         });
-    });
 
-    // 2. 스크롤 위치에 따른 Navbar 스타일 변경 및 Active 메뉴 감지
-    const navbar = document.getElementById('navbar');
-    const sections = document.querySelectorAll('section, footer');
+        navLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                navMenu.classList.remove("show");
+            });
+        });
+    }
 
-    window.addEventListener('scroll', () => {
+    // ==================== Navbar Scroll / Active Menu ====================
+    const navbar = document.getElementById("navbar");
+    const sections = document.querySelectorAll("section, footer");
+
+    const updateNavbarState = () => {
         const scrollY = window.pageYOffset;
 
-        // 헤더 그림자 효과 추가
-        if (scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
+        if (navbar) {
+            if (scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
         }
 
-        // 현재 보이는 섹션 감지
-        let currentSection = '';
-        sections.forEach(section => {
+        let currentSection = "";
+
+        sections.forEach((section) => {
             const sectionTop = section.offsetTop;
 
-            // 화면 상단에서 약간 여유(100px)를 두고 감지
-            if (scrollY >= (sectionTop - 100)) {
-                currentSection = section.getAttribute('id');
+            if (scrollY >= sectionTop - 120) {
+                currentSection = section.getAttribute("id");
             }
         });
 
-        // 현재 섹션에 맞는 메뉴 아이템 활성화
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href').includes(currentSection)) {
-                link.classList.add('active');
+        navLinks.forEach((link) => {
+            link.classList.remove("active");
+
+            const href = link.getAttribute("href");
+            if (href === `#${currentSection}`) {
+                link.classList.add("active");
             }
         });
-    });
+    };
+
+    window.addEventListener("scroll", updateNavbarState);
+    updateNavbarState();
+
+    // ==================== Email Copy ====================
+    const copyEmailBtn = document.getElementById("copyEmailBtn");
+    const emailText = document.getElementById("emailText");
+
+    const copyTextFallback = (text) => {
+        const textarea = document.createElement("textarea");
+
+        textarea.value = text;
+        textarea.setAttribute("readonly", "");
+        textarea.style.position = "fixed";
+        textarea.style.top = "-9999px";
+        textarea.style.left = "-9999px";
+
+        document.body.appendChild(textarea);
+        textarea.select();
+
+        const copied = document.execCommand("copy");
+        document.body.removeChild(textarea);
+
+        return copied;
+    };
+
+    if (copyEmailBtn && emailText) {
+        const originalText = emailText.textContent;
+        const email = copyEmailBtn.dataset.email || originalText;
+
+        copyEmailBtn.addEventListener("click", async () => {
+            let copied = false;
+
+            try {
+                if (navigator.clipboard && window.isSecureContext) {
+                    await navigator.clipboard.writeText(email);
+                    copied = true;
+                } else {
+                    copied = copyTextFallback(email);
+                }
+            } catch (error) {
+                copied = copyTextFallback(email);
+            }
+
+            if (!copied) {
+                emailText.textContent = "복사 실패";
+                copyEmailBtn.setAttribute("aria-label", "이메일 주소 복사 실패");
+
+                setTimeout(() => {
+                    emailText.textContent = originalText;
+                    copyEmailBtn.setAttribute("aria-label", "이메일 주소 복사");
+                }, 1500);
+
+                return;
+            }
+
+            copyEmailBtn.classList.add("is-copied");
+            emailText.textContent = "이메일 복사 완료!";
+            copyEmailBtn.setAttribute("aria-label", "이메일 주소가 복사되었습니다");
+
+            setTimeout(() => {
+                copyEmailBtn.classList.remove("is-copied");
+                emailText.textContent = originalText;
+                copyEmailBtn.setAttribute("aria-label", "이메일 주소 복사");
+            }, 1800);
+        });
+    }
 });

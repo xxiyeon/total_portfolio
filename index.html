@@ -376,7 +376,8 @@
             <div class="container">
                 <p class="footer-msg">시각적인 조화와 기능적인 신뢰를 모두 놓치지 않는 개발자가 되겠습니다.</p>
                 <div class="contact-info">
-                    <button type="button" class="contact-link" id="copyEmailBtn" data-email="tiaqhfl@nate.com">
+                    <button type="button" class="contact-link" id="copyEmailBtn" data-email="tiaqhfl@nate.com"
+                        aria-label="이메일 주소 복사">
                         <!-- Custom Email SVG -->
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-icon">
@@ -384,39 +385,8 @@
                             </path>
                             <polyline points="22,6 12,13 2,6"></polyline>
                         </svg>
-                        <span id="emailText">tiaqhfl@nate.com</span>
+                        <span id="emailText" aria-live="polite">tiaqhfl@nate.com</span>
                     </button>
-
-                    <script>
-                        const copyEmailBtn = document.getElementById("copyEmailBtn");
-                        const emailText = document.getElementById("emailText");
-
-                        copyEmailBtn.addEventListener("click", async () => {
-                            const email = copyEmailBtn.dataset.email;
-
-                            try {
-                                await navigator.clipboard.writeText(email);
-                                emailText.textContent = "이메일이 복사되었습니다";
-
-                                setTimeout(() => {
-                                    emailText.textContent = email;
-                                }, 1800);
-                            } catch (error) {
-                                const textarea = document.createElement("textarea");
-                                textarea.value = email;
-                                document.body.appendChild(textarea);
-                                textarea.select();
-                                document.execCommand("copy");
-                                document.body.removeChild(textarea);
-
-                                emailText.textContent = "이메일이 복사되었습니다";
-
-                                setTimeout(() => {
-                                    emailText.textContent = email;
-                                }, 1800);
-                            }
-                        });
-                    </script>
                     <a href="https://github.com/xxiyeon" target="_blank" rel="noopener noreferrer">
                         <!-- Custom GitHub SVG -->
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -427,8 +397,8 @@
                         </svg>
                         GitHub
                     </a>
-                    <a href="https://www.notion.so/93582db5b0ea8205b26f0142e7f206f1?source=copy_link" target="_blank"
-                        rel="noopener noreferrer">
+                    <a href="https://broadleaf-bassoon-95a.notion.site/93582db5b0ea8205b26f0142e7f206f1?source=copy_link"
+                        target="_blank" rel="noopener noreferrer">
                         <!-- Custom Notion SVG -->
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-icon">
