@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이시연 | Frontend-Focused Fullstack Developer</title>
+    <!-- Google Fonts: Pretendard -->
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <!-- 외부 CSS 연결 -->
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <div class="nav-logo">
+                <a href="#home">Lee Siyeon</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#home" class="nav-item active">Home</a></li>
+                    <li><a href="#about" class="nav-item">About</a></li>
+                    <li><a href="#skills" class="nav-item">Skills</a></li>
+                    <li><a href="#projects" class="nav-item">Projects</a></li>
+                    <li><a href="#contact" class="nav-item">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h2>이시연</h2>
+                    <h1>Frontend-Focused<br>Fullstack Developer</h1>
+                    <span class="title-badge">JAVA Developer</span>
+                    <p class="main-desc">
+                        Spring Boot 기반의 백엔드 개발과 React 기반의 프론트엔드 구현을 함께 경험하며, 데이터 흐름과 사용자 경험을 함께 고려하는 신입 개발자입니다.
+                    </p>
+                    <p class="sub-desc">
+                        기획, 화면 설계, DB 설계, API 구현, 프론트엔드 연동, 배포까지 경험하며 실제 서비스 흐름을 이해하는 개발자로 성장하고 있습니다.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Contact Me</a>
+                        <a href="#projects" class="btn btn-outline">View Projects</a>
+                    </div>
+                </div>
+
+                <div class="hero-cards">
+                    <div class="card hero-card">
+                        <h3>Core Stack</h3>
+                        <div class="hero-tags">
+                            <span class="tag highlight">Java</span>
+                            <span class="tag highlight">Spring Boot</span>
+                            <span class="tag highlight">React</span>
+                            <span class="tag">Oracle DB</span>
+                            <span class="tag">MyBatis</span>
+                            <span class="tag">Zustand</span>
+                        </div>
+                    </div>
+                    <div class="card hero-card">
+                        <h3>Tools & Infra</h3>
+                        <div class="hero-tags">
+                            <span class="tag">Axios</span>
+                            <span class="tag">GitHub</span>
+                            <span class="tag">Vercel</span>
+                            <span class="tag">Render</span>
+                            <span class="tag">Cloudinary</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+
+                <div class="about-grid">
+                    <div class="card about-main-card">
+                        <h3>시각적인 조화와 기능적인 신뢰를<br>모두 책임지는 풀스택 개발자입니다.</h3>
+                        <p>단순히 기능이 동작하는 것을 넘어, 사용자가 느끼는 시각적 안정감과 직관적인 흐름을 구현하는 데 깊은 가치를 둡니다.</p>
+                        <p>React 기반의 화면 구현과 Spring Boot 기반의 데이터 연동을 경험하며, UI의 시각적 의도와 백엔드 데이터 흐름이 자연스럽게 연결되는 서비스를 만들고자
+                            노력해왔습니다.</p>
+                        <p>철저한 분석과 집요함으로 문제의 근본을 해결하며, 사용자가 머무는 모든 순간에 긍정적인 가치를 전하고 싶습니다.</p>
+                    </div>
+
+                    <div class="about-side-cards">
+                        <div class="card">
+                            <ul class="info-list">
+                                <li>
+                                    <strong>KH정보교육원</strong>
+                                    <span>프로젝트 기반 AWS 풀스택 웹 개발자 양성과정 진행</span>
+                                </li>
+                                <li>
+                                    <strong>천안제일고등학교</strong>
+                                    <span>동물자원과 졸업</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <ul class="info-list">
+                                <li>
+                                    <strong>보노 인테리어</strong>
+                                    <span>디자이너 및 현장관리자</span>
+                                    <span>(디자인 감각, 현장 커뮤니케이션, 일정 관리 경험 보유)</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <ul class="info-list">
+                                <li><strong>전산응용건축제도기능사</strong></li>
+                                <li><strong>운전면허 2종 보통</strong></li>
+                                <li><strong>운전면허 2종 소형</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="strengths-grid">
+                    <div class="card strength-card">
+                        <h4>1. 사용자 경험을 고려한 UI 구현력</h4>
+                        <p>단순히 기능을 구현하는 것에 그치지 않고, 사용자의 시각적 안정감과 직관적인 흐름을 함께 고려합니다.</p>
+                    </div>
+                    <div class="card strength-card">
+                        <h4>2. 데이터 흐름을 추적하는 문제 해결력</h4>
+                        <p>API 요청, DB 데이터, 화면 반영 과정에서 문제가 발생했을 때 원인을 단계적으로 추적하고 해결하는 데 강점이 있습니다.</p>
+                    </div>
+                    <div class="card strength-card">
+                        <h4>3. 기획부터 배포까지 경험한 서비스 이해도</h4>
+                        <p>기획, 화면 설계, DB 설계, 백엔드 구현, 프론트엔드 연동, 배포까지 경험하며 서비스 전체 흐름을 이해했습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title">Tech Stack</h2>
+
+                <div class="skills-grid">
+                    <div class="card skill-card">
+                        <h3>Language</h3>
+                        <div class="skill-tags">
+                            <span class="tag highlight">Java 17</span>
+                            <span class="tag highlight">JavaScript ES6</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                        </div>
+                    </div>
+
+                    <div class="card skill-card">
+                        <h3>Backend</h3>
+                        <div class="skill-tags">
+                            <span class="tag highlight">Spring Boot</span>
+                            <span class="tag">MyBatis</span>
+                            <span class="tag">REST API</span>
+                            <span class="tag">JWT</span>
+                            <span class="tag">API 예외 처리</span>
+                            <span class="tag">데이터 검증 로직</span>
+                        </div>
+                    </div>
+
+                    <div class="card skill-card">
+                        <h3>Database</h3>
+                        <div class="skill-tags">
+                            <span class="tag highlight">Oracle 21c</span>
+                            <span class="tag highlight">MySQL</span>
+                            <span class="tag">ERD 설계</span>
+                            <span class="tag">CRUD</span>
+                            <span class="tag">데이터 정합성 관리</span>
+                            <span class="tag">논리 삭제 처리</span>
+                            <span class="tag">페이지네이션</span>
+                        </div>
+                    </div>
+
+                    <div class="card skill-card">
+                        <h3>Frontend</h3>
+                        <div class="skill-tags">
+                            <span class="tag highlight">React</span>
+                            <span class="tag highlight">Vite</span>
+                            <span class="tag">React Router</span>
+                            <span class="tag">TanStack Query</span>
+                            <span class="tag">Zustand</span>
+                            <span class="tag">Axios</span>
+                            <span class="tag">CSS Modules</span>
+                            <span class="tag">ApexCharts</span>
+                            <span class="tag">SweetAlert</span>
+                            <span class="tag">반응형 UI</span>
+                        </div>
+                    </div>
+
+                    <div class="card skill-card">
+                        <h3>API / External Service</h3>
+                        <div class="skill-tags">
+                            <span class="tag">카카오 주소검색 API</span>
+                            <span class="tag">Daum Postcode API</span>
+                            <span class="tag">네이버 지도 API</span>
+                            <span class="tag">Toss Payments API</span>
+                            <span class="tag highlight">SSE 실시간 알림</span>
+                            <span class="tag highlight">Cloudinary 이미지 업로드</span>
+                            <span class="tag">OneSignal</span>
+                        </div>
+                    </div>
+
+                    <div class="card skill-card">
+                        <h3>Infra / Deploy</h3>
+                        <div class="skill-tags">
+                            <span class="tag highlight">Vercel</span>
+                            <span class="tag highlight">Render</span>
+                            <span class="tag">Cloudinary</span>
+                            <span class="tag">Apache Tomcat</span>
+                            <span class="tag">AWS S3</span>
+                            <span class="tag">CloudFront</span>
+                            <span class="tag highlight">Docker</span>
+                            <span class="tag">Kubernetes / k3s</span>
+                            <span class="tag">GitHub Actions</span>
+                        </div>
+                    </div>
+
+                    <div class="card skill-card full-width">
+                        <h3>Collaboration / Tools</h3>
+                        <div class="skill-tags">
+                            <span class="tag highlight">Git</span>
+                            <span class="tag highlight">GitHub</span>
+                            <span class="tag">Notion</span>
+                            <span class="tag">Discord</span>
+                            <span class="tag">Figma</span>
+                            <span class="tag">ERD Cloud</span>
+                            <span class="tag">Spreadsheet</span>
+                            <span class="tag">IntelliJ IDEA</span>
+                            <span class="tag">Eclipse</span>
+                            <span class="tag">VS Code</span>
+                            <span class="tag">SQL Developer</span>
+                            <span class="tag">DBeaver</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+
+                <div class="projects-grid">
+                    <!-- Project 1: GreenCarry -->
+                    <article class="project-card">
+                        <div class="project-thumbnail thumb-green">
+                            <h3>GreenCarry</h3>
+                            <div class="badge-container">
+                                <span class="badge">Eco Delivery</span>
+                                <span class="badge">Carbon Data</span>
+                                <span class="badge">Admin CRUD</span>
+                                <span class="badge">Real-time UX</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>GreenCarry</h3>
+                                <span class="project-date">2026.03.24 ~ 2026.04.22</span>
+                            </div>
+                            <p class="project-desc">탄소 절감을 위한 친환경 배달 서비스 플랫폼</p>
+                            <p class="project-target">
+                                다회용기 사용과 친환경 배달 방식을 중심으로 설계한 탄소 절감 음식 주문 플랫폼입니다.
+                                탄소 절감 데이터가 사용자에게 실시간으로 정확하게 전달될 수 있도록 백엔드 연동의 무결성에 집중했습니다.
+                            </p>
+
+                            <div class="project-list">
+                                <h4>담당 역할</h4>
+                                <ul>
+                                    <li>관리자 용기 CRUD 구현</li>
+                                    <li>이미지 업로드 및 Drag & Drop 구현</li>
+                                    <li>개인정보 수정 / 회원 탈퇴 UX 구현</li>
+                                    <li>탄소 절감량 및 포인트 시각화</li>
+                                    <li>검색, 정렬, 페이지네이션 구현</li>
+                                    <li>API 연동 및 데이터 무결성 고려</li>
+                                </ul>
+                            </div>
+
+                            <div class="project-tags">
+                                <span class="tag">Java 17</span>
+                                <span class="tag">Spring Boot</span>
+                                <span class="tag">React</span>
+                                <span class="tag">Zustand</span>
+                                <span class="tag">SSE</span>
+                                <span class="tag">Kakao Address</span>
+                                <span class="tag">Naver Map</span>
+                                <span class="tag">Toss Payments</span>
+                            </div>
+
+                            <div class="project-buttons">
+                                <a href="https://greencarry.vercel.app/" class="btn btn-primary" target="_blank"
+                                    rel="noopener noreferrer">Live
+                                    Demo</a>
+                                <a href="https://github.com/xxiyeon/green_carry-ending" class="btn btn-outline"
+                                    target="_blank" rel="noopener noreferrer">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: WithDay -->
+                    <article class="project-card">
+                        <div class="project-thumbnail thumb-withday">
+                            <h3>WithDay</h3>
+                            <div class="badge-container">
+                                <span class="badge">Schedule Mate</span>
+                                <span class="badge">MyPage</span>
+                                <span class="badge">Profile Edit</span>
+                                <span class="badge">User Settings</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>WithDay</h3>
+                                <span class="project-date">2026.05.11 ~ 2026.06.10</span>
+                            </div>
+                            <p class="project-desc">여행, 식사, 문화생활 등 다양한 일정을 만들고 함께할 사람을 모집할 수 있는 일정 동행 플랫폼입니다.</p>
+                            <p class="project-target">
+                                사용자 맞춤형 추천 일정 제공 및 관심 일정 저장, 알림 기능을 통해 모바일 환경을 고려한 반응형 일정 동행 서비스를 구현했습니다.
+                            </p>
+
+                            <div class="project-list">
+                                <h4>담당 역할</h4>
+                                <ul>
+                                    <li>마이페이지 조회 및 본인/타인 프로필 화면 분기</li>
+                                    <li>닉네임, 소개글, 주소 등 회원 정보 수정 (Daum Postcode 연동)</li>
+                                    <li>프로필 이미지 업로드, 원형 크롭 기능 구현</li>
+                                    <li>관심사 조회, 선택/해제 칩 UI 및 알림 설정 상태 저장</li>
+                                    <li>활동 요약 정보 표시 (함께한 일정 수, 만난 위트 수 등)</li>
+                                    <li>로그아웃, 회원 탈퇴 모달 및 인증 세션 정리 구현</li>
+                                </ul>
+                            </div>
+
+                            <div class="project-tags">
+                                <span class="tag">Java</span>
+                                <span class="tag">Spring Boot</span>
+                                <span class="tag">React</span>
+                                <span class="tag">Zustand</span>
+                                <span class="tag">TanStack Query</span>
+                                <span class="tag">OneSignal</span>
+                                <span class="tag">AWS S3</span>
+                                <span class="tag">Docker</span>
+                            </div>
+
+                            <div class="project-buttons">
+                                <a href="https://withday-mib.vercel.app" class="btn btn-primary" target="_blank"
+                                    rel="noopener noreferrer">Live
+                                    Demo</a>
+                                <a href="https://github.com/xxiyeon/WithDay_finally" class="btn btn-outline"
+                                    target="_blank" rel="noopener noreferrer">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section / Footer -->
+        <footer id="contact" class="footer">
+            <div class="container">
+                <p class="footer-msg">200시각적인 조화와 기능적인 신뢰를 모두 놓치지 않는 개발자가 되겠습니다.</p>
+                <div class="contact-info">
+                    <a href="mailto:tiaqhfl@nate.com">
+                        <!-- Custom Email SVG -->
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-icon">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        tiaqhfl@nate.com
+                    </a>
+                    <a href="https://github.com/xxiyeon" target="_blank" rel="noopener noreferrer">
+                        <!-- Custom GitHub SVG -->
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-icon">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                            </path>
+                        </svg>
+                        GitHub
+                    </a>
+                    <a href="https://www.notion.so/93582db5b0ea8205b26f0142e7f206f1?source=copy_link" target="_blank"
+                        rel="noopener noreferrer">
+                        <!-- Custom Notion SVG -->
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-icon">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                        Notion
+                    </a>
+                </div>
+                <p class="copyright" id="copyright">© Lee Siyeon</p>
+            </div>
+        </footer>
+    </main>
+
+    <!-- 외부 JS 연결 -->
+    <script src="./index.js"></script>
+</body>
+
+</html>
