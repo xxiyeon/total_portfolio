@@ -574,7 +574,26 @@ img {
   font-size: 0.875rem;
   color: var(--sub-text);
 }
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+}
 
+.contact-link:hover {
+  color: #1e2d24;
+}
+
+.contact-icon {
+  flex-shrink: 0;
+}
 /* ==================== Responsive ==================== */
 @media (max-width: 1024px) {
   .skills-grid {
