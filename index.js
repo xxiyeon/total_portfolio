@@ -3,8 +3,8 @@ const portfolioPage = document.querySelector(".portfolio-page");
 
 const SCROLL_EXTRA = {
   about: 0,
-  "tech-stack": 560,
-  projects: 300,
+  "tech-stack": 80,
+  projects: 180,
 };
 
 const getSectionId = (link) => link.getAttribute("href").replace("#", "");
