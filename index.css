@@ -508,6 +508,7 @@ h1 {
 }
 
 .project-panel {
+  position: relative;
   margin-top: 52px;
   padding: 18px 18px 24px;
   background-color: var(--green-4);
@@ -516,6 +517,7 @@ h1 {
     rgba(255, 255, 255, 0.55) 0 20px,
     transparent 20px 126px
   );
+  min-height: 540px; /* 필요하면 높이 확보 */
 }
 
 .blue-project {
@@ -545,11 +547,13 @@ h1 {
 }
 
 .project-body {
-  display: grid;
+  display: block;
   grid-template-columns: minmax(0, 1fr) 340px;
   gap: 42px;
 }
-
+.project-text {
+  width: calc(100% - 390px); /* 이미지 너비 + 여유공간 */
+}
 .project-text h3 {
   margin: 0 0 4px;
   font-family: Georgia, "Times New Roman", serif;
@@ -614,8 +618,13 @@ h1 {
 }
 
 .project-image {
-  margin: 40px 0 0;
-  align-self: start;
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+
+  width: 340px; /* 필요 크기 */
+  margin: 0;
+  align-self: auto;
   box-shadow: 0 12px 18px rgba(0, 0, 0, 0.18);
   background: #fff;
 }
@@ -625,6 +634,7 @@ h1 {
   max-height: 470px;
   object-fit: cover;
   object-position: top;
+  display: block;
 }
 
 .blue-project .project-image img {
