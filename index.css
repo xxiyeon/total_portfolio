@@ -1077,38 +1077,41 @@ body.is-intro-open {
 
   transform-origin: left top;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  will-change: transform, clip-path, opacity;
+  will-change: transform, clip-path;
 }
 
+/* 접히는 가장자리 그림자 */
 .intro-cover::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: 0;
 
-  background: radial-gradient(
-    circle at 0 0,
-    rgba(0, 0, 0, 0.12) 0,
-    rgba(0, 0, 0, 0.06) 18%,
-    transparent 42%
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.16) 0%,
+    rgba(0, 0, 0, 0.08) 15%,
+    transparent 38%
   );
 
   opacity: 0;
   pointer-events: none;
 }
 
+/* 왼쪽 위로 보자기 잡아 올리는 효과 */
 .intro-cover.is-leaving {
   pointer-events: none;
-  animation: introClothExit 0.86s cubic-bezier(0.64, 0, 0.2, 1) forwards;
+  animation: introClothExit 1.05s cubic-bezier(0.76, 0, 0.24, 1) forwards;
 }
 
 .intro-cover.is-leaving::before {
-  animation: introClothShadow 0.86s ease forwards;
+  animation: introClothShadow 1.05s ease forwards;
 }
 
 .intro-cover.is-leaving .intro-enter {
   animation: introEnterSoftHide 0.42s ease forwards;
 }
+
 @keyframes introClothExit {
   0% {
     opacity: 1;
@@ -1117,18 +1120,25 @@ body.is-intro-open {
     border-bottom-right-radius: 0;
   }
 
-  45% {
+  28% {
     opacity: 1;
-    transform: translate(-12px, -18px) rotate(-0.8deg) scale(0.995);
-    clip-path: polygon(0 0, 100% 0, 98% 96%, 0 100%);
-    border-bottom-right-radius: 90px 70px;
+    transform: translate(-6px, -8px) rotate(-0.4deg) scale(1);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    border-bottom-right-radius: 60px;
+  }
+
+  62% {
+    opacity: 1;
+    transform: translate(-28px, -34px) rotate(-2.4deg) scale(0.94);
+    clip-path: polygon(0 0, 100% 0, 88% 88%, 0 100%);
+    border-bottom-right-radius: 180px 120px;
   }
 
   100% {
-    opacity: 0;
-    transform: translate(-18vw, -24vh) rotate(-4deg) scale(0.72);
-    clip-path: polygon(0 0, 58% 0, 0 58%, 0 0);
-    border-bottom-right-radius: 180px;
+    opacity: 1;
+    transform: translate(-52vw, -58vh) rotate(-8deg) scale(0.42);
+    clip-path: polygon(0 0, 46% 0, 0 46%, 0 0);
+    border-bottom-right-radius: 260px;
   }
 }
 
@@ -1137,8 +1147,12 @@ body.is-intro-open {
     opacity: 0;
   }
 
-  35% {
-    opacity: 1;
+  24% {
+    opacity: 0.45;
+  }
+
+  72% {
+    opacity: 0.7;
   }
 
   100% {
@@ -1154,7 +1168,7 @@ body.is-intro-open {
 
   100% {
     opacity: 0;
-    transform: scale(0.94);
+    transform: scale(0.92);
   }
 }
 

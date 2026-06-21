@@ -152,7 +152,7 @@ if (introCover && introEnter) {
       // fade-out 끝난 뒤 DOM에서 제거
       window.setTimeout(() => {
         introCover.remove();
-      }, 920);
+      }, 1120);
     }, 240);
   };
 
