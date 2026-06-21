@@ -303,7 +303,7 @@ h1 {
 
 .about-section p {
   margin: 0 0 14px;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.75;
   word-break: keep-all;
 }
@@ -330,7 +330,7 @@ h1 {
 }
 
 .skill-item span {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 900;
   line-height: 1;
 }
@@ -577,7 +577,7 @@ h1 {
 
 .project-text ul {
   list-style: disc;
-  padding-left: 17px;
+  padding-left: 18px;
   margin-bottom: 24px;
   font-size: 12px;
   line-height: 1.55;
