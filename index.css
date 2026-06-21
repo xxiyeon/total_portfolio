@@ -1056,7 +1056,10 @@ body.is-intro-open {
 
   transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
+/* hover에서는 scale 변화 없음 */
+.intro-enter:hover {
+  transform: scale(1);
+}
 .intro-enter.is-pressed {
   transform: scale(0.96);
   transition-duration: 0.12s;
