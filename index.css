@@ -24,7 +24,13 @@ html {
 
 body {
   margin: 0;
-  font-family: "Andika", "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-family:
+    "Andika",
+    "Pretendard",
+    -apple-system,
+    BlinkMacSystemFont,
+    system-ui,
+    sans-serif;
   color: var(--ink);
   background: var(--green-1);
   font-size: 14px;
@@ -89,6 +95,8 @@ li {
   height: 76px;
   margin-top: -61px;
   margin-bottom: 0;
+  argin-top: -61px;
+  margin-bottom: 38px;
   padding-right: 86px;
 
   z-index: 100;
@@ -407,9 +415,8 @@ h1 {
   width: 94%;
 }
 
-
 /* =========================
-   EDUCATION + APPROACH
+  EDUCATION + APPROACH
 ========================= */
 
 .training-approach-grid {
@@ -774,54 +781,8 @@ h1 {
   .folder-nav {
     justify-content: center;
     gap: 6px;
-    height: 72px;
     margin-top: -57px;
-    margin-bottom: 0;
+    margin-bottom: 30px;
     padding-right: 0;
-  }
-
-  .folder-nav::after {
-    top: 30px;
-    height: 54px;
-  }
-
-  .folder-nav a {
-    min-width: 96px;
-    height: 30px;
-    padding: 8px 12px 0;
-    font-size: 9px;
-  }
-
-  h1 {
-    font-size: 32px;
-  }
-
-  .profile-row {
-    flex-direction: column;
-    gap: 18px;
-  }
-
-  .speech-card {
-    width: 100%;
-    max-width: 340px;
-    margin-left: 0;
-  }
-
-  .skill-item {
-    grid-template-columns: 1fr;
-    gap: 5px;
-  }
-
-  .project-panel {
-    padding: 14px;
-  }
-
-  .project-text h3 {
-    font-size: 30px;
-  }
-
-  .footer-tags {
-    flex-direction: column;
-    gap: 8px;
   }
 }
