@@ -1284,6 +1284,7 @@ body.is-intro-open {
   }
 }
 
+/*
 @media (prefers-reduced-motion: reduce) {
   .intro-cover,
   .intro-enter,
@@ -1298,3 +1299,4 @@ body.is-intro-open {
     visibility: hidden;
   }
 }
+*/
