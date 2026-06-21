@@ -36,7 +36,7 @@ body {
   font-family: "Andika", "Pretendard", sans-serif;
 }
 .project_font {
-  font-family: "Doppio One", "Pretendard", sans-serif;
+  font-family: "Darumadrop One", "Pretendard", sans-serif;
 }
 a {
   color: inherit;
@@ -84,6 +84,7 @@ li {
   display: flex;
   gap: 10px;
   z-index: 2;
+  font-weight: 600;
 }
 
 .folder-nav a {
@@ -412,7 +413,7 @@ h1 {
 
 .approach-content h2 {
   position: absolute;
-  top: 18px;
+  top: 14px;
   left: 50%;
   transform: translateX(-50%);
 
@@ -528,7 +529,7 @@ h1 {
   margin-bottom: 24px;
   font-size: 11px;
   font-weight: 900;
-  font-family: "Darumadrop One", "Pretendard", sans-serif;
+  font-family: "Doppio One", "Pretendard", sans-serif;
 }
 
 .project-links {
