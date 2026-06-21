@@ -15,7 +15,7 @@ const getAbsoluteTop = (element) => {
 
 const getScrollTop = (id) => {
   if (id === "about") {
-    return getAbsoluteTop(portfolioPage);
+    return Math.max(0, getAbsoluteTop(portfolioPage) - 1);
   }
 
   const section = document.getElementById(id);
