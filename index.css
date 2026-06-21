@@ -112,21 +112,27 @@ h1 {
 .profile-row {
   display: flex;
   align-items: flex-start;
-  gap: 16px;
+  gap: 12px;
   margin-top: 22px;
 }
 .avatar-box {
-  width: 148px;
-  height: 148px;
+  width: 160px;
+  height: 188px;
+  background: #58af7b;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   margin: 0;
   overflow: hidden;
-  background: var(--green-1);
 }
 
 .avatar-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 128px;
+  height: 128px;
+  object-fit: contain;
+  display: block;
 }
 
 .speech-card {
