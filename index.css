@@ -339,8 +339,8 @@ h1 {
 .timeline-item strong,
 .training-item strong {
   display: block;
-  font-size: 13px;
-  font-weight: 900;
+  font-size: 15px;
+  font-weight: 700;
   line-height: 1.35;
 }
 
@@ -348,7 +348,7 @@ h1 {
 .training-item p {
   margin: 2px 0 0;
   color: #666;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.4;
 }
 
@@ -708,11 +708,12 @@ h1 {
   right: 16px;
   bottom: 16px;
 
-  width: 340px; /* 필요 크기 */
+  width: 340px;
   margin: 0;
   align-self: auto;
-  box-shadow: 0 12px 18px rgba(0, 0, 0, 0.18);
-  background: #fff;
+
+  background: transparent;
+  box-shadow: none;
 }
 
 .project-image img {
