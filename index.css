@@ -386,11 +386,11 @@ h1 {
   margin-top: 54px;
   align-items: start;
 }
-
 .approach-block {
   position: relative;
   width: 430px;
-  height: 335px;
+  height: 300px;
+  flex-shrink: 0;
 }
 
 .vegetable-frame {
@@ -407,15 +407,12 @@ h1 {
   position: absolute;
   inset: 0;
   z-index: 1;
-  width: auto;
-  height: 100%;
   padding: 0;
-  text-align: left;
 }
 
 .approach-content h2 {
   position: absolute;
-  top: 30px;
+  top: 18px;
   left: 50%;
   transform: translateX(-50%);
 
@@ -429,33 +426,31 @@ h1 {
 
 .approach-content dl {
   position: absolute;
-  top: 92px;
-  left: 58px;
-  right: 46px;
-
+  top: 72px;
+  left: 46px;
+  right: 40px;
   margin: 0;
 }
 
 .approach-content dt {
-  margin-top: 26px;
+  margin: 0;
   font-size: 13px;
   font-weight: 900;
-  line-height: 1.2;
+  line-height: 1.25;
   letter-spacing: -0.02em;
 }
 
-.approach-content dt:first-child {
-  margin-top: 0;
-}
-
 .approach-content dd {
-  margin: 8px 0 0;
+  margin: 7px 0 22px;
   color: #666;
   font-size: 12px;
   line-height: 1.65;
   word-break: keep-all;
 }
 
+.approach-content dd:last-child {
+  margin-bottom: 0;
+}
 /* =========================
    TECH STACK
 ========================= */
