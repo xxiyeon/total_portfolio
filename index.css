@@ -85,6 +85,7 @@ li {
 .folder-nav {
   position: sticky;
   top: 0;
+  z-index: 100;
 
   display: flex;
   justify-content: flex-end;
@@ -93,29 +94,24 @@ li {
 
   width: calc(100% + 128px);
   height: 92px;
-  margin-top: -61px;
-  margin-left: -64px;
-  margin-bottom: 0;
-  padding-right: 150px;
+  margin: -61px -64px 0;
+  padding: 0 150px 0 64px;
 
   box-sizing: border-box;
   isolation: isolate;
 
-  /*
-    위 30px은 body 초록 배경과 이어지고,
-    아래 영역은 portfolio-page의 흰 종이와 이어지게 처리.
-  */
   background: linear-gradient(
     to bottom,
     var(--green-1) 0 30px,
     var(--paper) 30px 100%
   );
 
-  z-index: 100;
+  box-shadow: 0 1px 0 0 var(--paper);
   pointer-events: none;
 }
 
-.folder-nav::before {
+.folder-nav::before,
+.folder-nav::after {
   content: none;
 }
 
@@ -461,8 +457,10 @@ h1 {
 .approach-block {
   position: relative;
   width: 430px;
-  height: 300px;
+  aspect-ratio: 43 / 30;
+  height: auto;
   flex-shrink: 0;
+  overflow: hidden;
 }
 
 .vegetable-frame {
@@ -484,14 +482,14 @@ h1 {
 
 .approach-content h2 {
   position: absolute;
-  top: 18px;
+  top: 29px;
   left: 0;
   right: 0;
   transform: none;
 
   margin: 0;
   text-align: center;
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 1;
   letter-spacing: -0.02em;
@@ -500,26 +498,36 @@ h1 {
 
 .approach-content dl {
   position: absolute;
-  top: 84px;
-  left: 64px;
-  right: 56px;
+  top: 78px;
+  left: 66px;
+  right: 60px;
+  bottom: 31px;
+
   margin: 0;
+  overflow: hidden;
 }
 
 .approach-content dt {
-  margin: 0;
-  font-size: 14px;
+  margin: 0 0 3px;
+  font-size: 13.2px;
   font-weight: 700;
-  line-height: 1.28;
-  letter-spacing: -0.02em;
+  line-height: 1.22;
+  letter-spacing: -0.03em;
+  word-break: keep-all;
+}
+
+.approach-content dt:not(:first-of-type) {
+  margin-top: 7px;
 }
 
 .approach-content dd {
-  margin: 6px 0 14px;
+  margin: 0;
   color: #666;
-  font-size: 13px;
-  line-height: 1.48;
+  font-size: 11px;
+  line-height: 1.32;
+  letter-spacing: -0.035em;
   word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 .approach-content dd:last-child {
@@ -953,8 +961,8 @@ h1 {
 
   .folder-nav {
     width: calc(100% + 56px);
-    margin-left: -28px;
-    padding-right: 60px;
+    margin: -61px -28px 0;
+    padding: 0 60px 0 28px;
   }
 
   .intro-section,
@@ -1025,16 +1033,16 @@ h1 {
 
     width: calc(100% + 40px);
     height: 82px;
-    margin-top: -57px;
-    margin-left: -20px;
-    margin-bottom: 0;
-    padding-right: 0;
+    margin: -57px -20px 0;
+    padding: 0 20px;
 
     background: linear-gradient(
       to bottom,
       var(--green-1) 0 30px,
       var(--paper) 30px 100%
     );
+
+    box-shadow: 0 1px 0 0 var(--paper);
   }
 
   .folder-nav a {
@@ -1131,11 +1139,11 @@ body.is-intro-open {
 /* 마우스 커서 이미지 */
 .intro-cursor {
   position: absolute;
-  right: 18px;
-  bottom: 40px;
+  right: -18px;
+  bottom: 18px;
 
-  width: 112px;
-  height: 112px;
+  width: 147px;
+  height: 147px;
 
   object-fit: contain;
   pointer-events: none;
@@ -1182,10 +1190,10 @@ body.is-intro-open {
   }
 
   .intro-cursor {
-    right: 10px;
-    bottom: 32px;
-    width: 86px;
-    height: 86px;
+    right: -10px;
+    bottom: 20px;
+    width: 112px;
+    height: 112px;
   }
 }
 

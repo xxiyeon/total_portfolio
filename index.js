@@ -7,10 +7,6 @@ const SCROLL_EXTRA = {
   projects: 300,
 };
 
-// ABOUT 클릭 시 흰 종이 자체가 아니라 책갈피 탭의 시작점이 화면 최상단에 붙도록 보정합니다.
-// .portfolio-page padding-top 38px + .folder-nav margin-top -61px = -23px 위치 차이
-const ABOUT_NAV_OFFSET = 23;
-
 const getSectionId = (link) => link.getAttribute("href").replace("#", "");
 
 const getAbsoluteTop = (element) => {
@@ -19,7 +15,7 @@ const getAbsoluteTop = (element) => {
 
 const getScrollTop = (id) => {
   if (id === "about") {
-    return Math.max(0, getAbsoluteTop(portfolioPage) - ABOUT_NAV_OFFSET);
+    return 0;
   }
 
   const section = document.getElementById(id);
@@ -146,12 +142,9 @@ if (introCover && introEnter) {
       introCover.classList.add("is-leaving");
       document.body.classList.remove("is-intro-open");
 
-      const portfolioPage = document.querySelector(".portfolio-page");
-
       if (portfolioPage) {
-        const top = portfolioPage.getBoundingClientRect().top + window.scrollY;
         window.scrollTo({
-          top: Math.max(0, top - ABOUT_NAV_OFFSET),
+          top: 0,
           behavior: "auto",
         });
       }
