@@ -1053,14 +1053,19 @@ body.is-intro-open {
   background: transparent;
 
   cursor: pointer;
+
   transform: scale(1);
+  transform-origin: center;
 
   transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1);
 }
-/* hover에서는 scale 변화 없음 */
+
+/* hover에서는 크기 변화 없음 */
 .intro-enter:hover {
   transform: scale(1);
 }
+
+/* 클릭해서 누르고 있는 순간에만 작아짐 */
 .intro-enter.is-pressed {
   transform: scale(0.96);
   transition-duration: 0.12s;
@@ -1076,9 +1081,8 @@ body.is-intro-open {
   object-fit: contain;
   object-position: center;
 
-  transition:
-    opacity 0.22s ease,
-    transform 0.22s ease;
+  pointer-events: none;
+  transition: opacity 0.22s ease;
 }
 
 .intro-logo-default {
@@ -1089,12 +1093,38 @@ body.is-intro-open {
   opacity: 0;
 }
 
+/* 마우스 커서 이미지 */
+.intro-cursor {
+  position: absolute;
+  right: 18px;
+  bottom: 40px;
+
+  width: 112px;
+  height: 112px;
+
+  object-fit: contain;
+  pointer-events: none;
+
+  opacity: 0;
+  transform: translate(8px, 8px);
+  transition:
+    opacity 0.22s ease,
+    transform 0.22s ease;
+}
+
+/* hover 시 로고 이미지 변경 */
 .intro-enter:hover .intro-logo-default {
   opacity: 0;
 }
 
 .intro-enter:hover .intro-logo-hover {
   opacity: 1;
+}
+
+/* hover 시 커서 등장 */
+.intro-enter:hover .intro-cursor {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 
 .intro-enter:focus-visible {
@@ -1115,12 +1145,20 @@ body.is-intro-open {
     width: min(330px, 78vw);
     height: min(250px, 58vw);
   }
+
+  .intro-cursor {
+    right: 10px;
+    bottom: 32px;
+    width: 86px;
+    height: 86px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .intro-cover,
   .intro-enter,
-  .intro-logo {
+  .intro-logo,
+  .intro-cursor {
     transition: none;
   }
 }
