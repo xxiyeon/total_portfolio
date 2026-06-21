@@ -5,7 +5,7 @@ const portfolioPage = document.querySelector(".portfolio-page");
 // 숫자를 키우면 더 아래로 내려가고, 줄이면 더 위에서 멈춥니다.
 const SCROLL_EXTRA = {
   about: 0,
-  "tech-stack": 150,
+  "tech-stack": 560,
   projects: 300,
 };
 
