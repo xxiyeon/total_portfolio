@@ -33,12 +33,12 @@ body {
     sans-serif;
   color: var(--ink);
   background: var(--green-1);
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.55;
 }
 .project_font {
   font-family: "Darumadrop One", "Pretendard", sans-serif;
-  font-size: 20px;
+  font-size: 22px;
 }
 a {
   color: inherit;
@@ -140,7 +140,7 @@ li {
 
   text-align: center;
   font-family: "Darumadrop One", "Pretendard", sans-serif;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   line-height: 1;
 
@@ -181,7 +181,7 @@ li {
 
 .eyebrow {
   margin: 0 0 6px;
-  font-size: 15px;
+  font-size: 19px;
   font-weight: 800;
 }
 
@@ -263,7 +263,7 @@ h1 {
 
 .speech-content p {
   margin: 0 0 8px;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 500;
   line-height: 1.25;
 }
@@ -283,7 +283,7 @@ h1 {
 
   color: var(--ink);
   text-decoration: none;
-  font-size: 15px;
+  font-size: 19px;
   font-weight: 800;
   white-space: nowrap;
 }
@@ -331,7 +331,7 @@ h1 {
 
 .timeline-item span,
 .training-item span {
-  font-size: 12px;
+  font-size: 16px;
   color: #333;
   line-height: 1.45;
 }
@@ -339,7 +339,7 @@ h1 {
 .timeline-item strong,
 .training-item strong {
   display: block;
-  font-size: 15px;
+  font-size: 19px;
   font-weight: 700;
   line-height: 1.35;
 }
@@ -348,7 +348,7 @@ h1 {
 .training-item p {
   margin: 2px 0 0;
   color: #666;
-  font-size: 13px;
+  font-size: 17px;
   line-height: 1.4;
 }
 
@@ -363,7 +363,7 @@ h1 {
 
 .about-section p {
   margin: 0 0 14px;
-  font-size: 15px;
+  font-size: 19px;
   line-height: 1.75;
   word-break: keep-all;
 }
@@ -490,7 +490,7 @@ h1 {
 
 .approach-content dt {
   margin: 0;
-  font-size: 13px;
+  font-size: 17px;
   font-weight: 900;
   line-height: 1.25;
   letter-spacing: -0.02em;
@@ -499,7 +499,7 @@ h1 {
 .approach-content dd {
   margin: 7px 0 22px;
   color: #666;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.65;
   word-break: keep-all;
 }
@@ -543,13 +543,13 @@ h1 {
 
 .tech-list h3 {
   margin: 0 0 4px;
-  font-size: 13px;
+  font-size: 17px;
   font-weight: 900;
 }
 
 .tech-list p {
   margin: 0;
-  font-size: 12px;
+  font-size: 16px;
   color: #000;
 }
 
@@ -587,7 +587,7 @@ h1 {
   margin-bottom: 24px;
 
   font-family: "Doppio One", "Pretendard", sans-serif;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .project-links {
@@ -600,7 +600,7 @@ h1 {
 
   min-width: max-content;
 
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.2;
 }
@@ -654,15 +654,15 @@ h1 {
 }
 
 .project-text p {
-  margin: 0 0 14px;
-  font-size: 12px;
+  margin: 0 0 18px;
+  font-size: 16px;
   line-height: 1.65;
   word-break: keep-all;
 }
 
 .project-text h4 {
   margin: 28px 0 8px;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 900;
 }
 
@@ -670,7 +670,7 @@ h1 {
   list-style: disc;
   padding-left: 18px;
   margin-bottom: 24px;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.55;
 }
 
@@ -681,7 +681,7 @@ h1 {
 .used-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .used-table tr {
@@ -735,7 +735,7 @@ h1 {
 .footer {
   margin-top: 100px;
   text-align: center;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .footer > p {
