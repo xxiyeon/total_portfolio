@@ -97,6 +97,8 @@ li {
   margin-bottom: 0;
   padding-right: 86px;
 
+  box-sizing: border-box;
+
   z-index: 100;
   pointer-events: none;
 }
@@ -116,16 +118,17 @@ li {
   z-index: 0;
   pointer-events: none;
 }
+
 .folder-nav::after {
   content: "";
   position: absolute;
+  top: 28px;
   left: 0;
   right: 0;
-  top: 28px;
 
   height: 58px;
-  background: var(--paper);
 
+  background: var(--paper);
   z-index: 0;
   pointer-events: none;
 }
@@ -137,6 +140,8 @@ li {
   min-width: 88px;
   height: 28px;
   padding: 7px 16px 0;
+
+  box-sizing: border-box;
 
   text-align: center;
   font-family: "Darumadrop One", "Pretendard", sans-serif;
