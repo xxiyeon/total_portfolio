@@ -123,6 +123,7 @@ window.addEventListener("scroll", updateActiveNav, { passive: true });
 window.addEventListener("resize", updateActiveNav);
 
 updateActiveNav();
+
 const introCover = document.querySelector("#introCover");
 const introEnter = document.querySelector(".intro-enter");
 
@@ -137,22 +138,22 @@ if (introCover && introEnter) {
     isMovingToMain = true;
     introEnter.classList.remove("is-pressed");
 
-    // scale(0.96)에서 원래 크기로 복귀하는 애니메이션을 먼저 보여줌
     window.setTimeout(() => {
-  introCover.classList.add("is-leaving");
-  document.body.classList.remove("is-intro-open");
+      introCover.classList.add("is-leaving");
+      document.body.classList.remove("is-intro-open");
 
-  if (portfolioPage) {
-    window.scrollTo({
-      top: 0,
-      behavior: "auto",
-    });
-  }
+      if (portfolioPage) {
+        window.scrollTo({
+          top: 0,
+          behavior: "auto",
+        });
+      }
 
-  window.setTimeout(() => {
-    introCover.remove();
-  }, 760);
-}, 120);
+      window.setTimeout(() => {
+        introCover.remove();
+      }, 760);
+    }, 120);
+  };
 
   introEnter.addEventListener("pointerdown", (event) => {
     introEnter.classList.add("is-pressed");

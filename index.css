@@ -1053,6 +1053,7 @@ h1 {
     font-size: 9px;
   }
 }
+
 /* =========================
    INTRO COVER
 ========================= */
@@ -1080,7 +1081,6 @@ body.is-intro-open {
   will-change: transform, clip-path;
 }
 
-/* 접히는 가장자리 그림자 */
 .intro-cover::before {
   content: "";
   position: absolute;
@@ -1090,15 +1090,14 @@ body.is-intro-open {
   background: linear-gradient(
     135deg,
     rgba(0, 0, 0, 0.16) 0%,
-    rgba(0, 0, 0, 0.08) 15%,
-    transparent 38%
+    rgba(0, 0, 0, 0.08) 16%,
+    transparent 40%
   );
 
   opacity: 0;
   pointer-events: none;
 }
 
-/* 왼쪽 위로 보자기 잡아 올리는 효과 */
 .intro-cover.is-leaving {
   pointer-events: none;
   animation: introClothExit 0.68s cubic-bezier(0.72, 0, 0.2, 1) forwards;
@@ -1106,6 +1105,10 @@ body.is-intro-open {
 
 .intro-cover.is-leaving::before {
   animation: introClothShadow 0.68s ease forwards;
+}
+
+.intro-cover.is-leaving .intro-enter {
+  animation: introEnterSoftHide 0.3s ease forwards;
 }
 
 @keyframes introClothExit {
@@ -1149,58 +1152,6 @@ body.is-intro-open {
   }
 }
 
-.intro-cover.is-leaving .intro-enter {
-  animation: introEnterSoftHide 0.42s ease forwards;
-}
-
-@keyframes introClothExit {
-  0% {
-    opacity: 1;
-    transform: translate(0, 0) rotate(0deg) scale(1);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    border-bottom-right-radius: 0;
-  }
-
-  28% {
-    opacity: 1;
-    transform: translate(-6px, -8px) rotate(-0.4deg) scale(1);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    border-bottom-right-radius: 60px;
-  }
-
-  62% {
-    opacity: 1;
-    transform: translate(-28px, -34px) rotate(-2.4deg) scale(0.94);
-    clip-path: polygon(0 0, 100% 0, 88% 88%, 0 100%);
-    border-bottom-right-radius: 180px 120px;
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(-52vw, -58vh) rotate(-8deg) scale(0.42);
-    clip-path: polygon(0 0, 46% 0, 0 46%, 0 0);
-    border-bottom-right-radius: 260px;
-  }
-}
-
-@keyframes introClothShadow {
-  0% {
-    opacity: 0;
-  }
-
-  24% {
-    opacity: 0.45;
-  }
-
-  72% {
-    opacity: 0.7;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
 @keyframes introEnterSoftHide {
   0% {
     opacity: 1;
@@ -1231,12 +1182,10 @@ body.is-intro-open {
   transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* hover에서는 크기 변화 없음 */
 .intro-enter:hover {
   transform: scale(1);
 }
 
-/* 클릭해서 누르고 있는 순간에만 작아짐 */
 .intro-enter.is-pressed {
   transform: scale(0.96);
   transition-duration: 0.12s;
@@ -1264,7 +1213,6 @@ body.is-intro-open {
   opacity: 0;
 }
 
-/* 마우스 커서 이미지 */
 .intro-cursor {
   position: absolute;
   right: -18px;
@@ -1283,7 +1231,6 @@ body.is-intro-open {
     transform 0.22s ease;
 }
 
-/* hover 시 로고 이미지 변경 */
 .intro-enter:hover .intro-logo-default {
   opacity: 0;
 }
@@ -1292,7 +1239,6 @@ body.is-intro-open {
   opacity: 1;
 }
 
-/* hover 시 커서 등장 */
 .intro-enter:hover .intro-cursor {
   opacity: 1;
   transform: translate(0, 0);
@@ -1325,19 +1271,3 @@ body.is-intro-open {
   }
 }
 
-/*
-@media (prefers-reduced-motion: reduce) {
-  .intro-cover,
-  .intro-enter,
-  .intro-logo,
-  .intro-cursor {
-    transition: none;
-    animation: none;
-  }
-
-  .intro-cover.is-leaving {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-*/
