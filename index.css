@@ -181,18 +181,6 @@ h1 {
   stroke-width: 2;
   fill: none;
 }
-.speech-card::after {
-  content: "";
-  position: absolute;
-  left: 28px;
-  bottom: -39px;
-  width: 72px;
-  height: 43px;
-  background: #fff;
-  border-left: 3px solid var(--ink);
-  border-bottom: 3px solid var(--ink);
-  transform: skewX(-35deg);
-}
 
 .speech-card p {
   margin: 0 0 6px;
