@@ -190,7 +190,7 @@ h1 {
   font-size: 40px;
   line-height: 0.95;
   letter-spacing: 1.5px;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .birth {
@@ -319,7 +319,7 @@ h1 {
 
   font-size: 16px;
   line-height: 1;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: 0.1px;
 }
 
@@ -372,7 +372,7 @@ h1 {
 
 .about-section strong {
   color: var(--green-1);
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .skills-section {
@@ -393,7 +393,7 @@ h1 {
 
 .skill-item span {
   font-size: 18px;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1;
 }
 
@@ -476,7 +476,7 @@ h1 {
 
   margin: 0;
   font-size: 19px;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1;
   letter-spacing: -0.02em;
   white-space: nowrap;
@@ -493,7 +493,7 @@ h1 {
 .approach-content dt {
   margin: 0;
   font-size: 17px;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.25;
   letter-spacing: -0.02em;
 }
@@ -546,7 +546,7 @@ h1 {
 .tech-list h3 {
   margin: 0 0 4px;
   font-size: 17px;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .tech-list p {
@@ -652,7 +652,7 @@ h1 {
 }
 .project-subtitle {
   margin: 24px 0 8px !important;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .project-text p {
@@ -665,7 +665,7 @@ h1 {
 .project-text h4 {
   margin: 28px 0 8px;
   font-size: 20px;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .project-text ul {
@@ -741,7 +741,7 @@ h1 {
 }
 
 .footer > p {
-  font-weight: 900;
+  font-weight: 700;
   margin: 0 0 20px;
 }
 
@@ -750,7 +750,7 @@ h1 {
   justify-content: center;
   gap: 28px;
   margin-bottom: 24px;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .footer-links a::before {
@@ -762,7 +762,7 @@ h1 {
   justify-content: center;
   gap: 58px;
   color: var(--green-1);
-  font-weight: 900;
+  font-weight: 700;
 }
 .footer-links {
   display: flex;
