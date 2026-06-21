@@ -4,6 +4,7 @@
   --green-3: #b0dbc1;
   --green-4: #cce3d5;
   --green-5: #e9f4ee;
+
   --ink: #111111;
   --muted: #777777;
   --line: #1f1f1f;
@@ -37,15 +38,21 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
 img {
   display: block;
   max-width: 100%;
 }
+
 ul,
 li {
   margin: 0;
   padding: 0;
 }
+
+/* =========================
+   PAGE
+========================= */
 
 .page-wrap {
   width: 100%;
@@ -61,6 +68,10 @@ li {
   background: var(--paper);
   min-height: 100vh;
 }
+
+/* =========================
+   NAV
+========================= */
 
 .folder-nav {
   position: absolute;
@@ -84,6 +95,25 @@ li {
   clip-path: polygon(10% 0, 90% 0, 100% 100%, 0 100%);
 }
 
+/* =========================
+   INTRO
+========================= */
+
+.intro-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 390px;
+  gap: 74px;
+  align-items: start;
+}
+
+.intro-left {
+  min-width: 0;
+}
+
+.intro-right {
+  padding-top: 118px;
+}
+
 .eyebrow {
   margin: 0 0 6px;
   font-size: 15px;
@@ -103,30 +133,30 @@ h1 {
   font-weight: 800;
 }
 
-.intro-section {
-  display: grid;
-  grid-template-columns: 1fr 390px;
-  gap: 56px;
-  align-items: start;
-}
+/* =========================
+   PROFILE
+========================= */
 
 .profile-row {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
+  gap: 14px;
   margin-top: 22px;
+  margin-bottom: 58px;
 }
+
 .avatar-box {
   width: 160px;
   height: 188px;
-  background: #58af7b;
+  margin: 0;
+  background: var(--green-1);
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  margin: 0;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .avatar-box img {
@@ -140,31 +170,34 @@ h1 {
   position: relative;
   width: 340px;
   height: 170px;
-  margin-left: -19px;
+  margin-left: -18px;
   margin-top: 0;
 
   background: none;
   border: none;
   padding: 0;
+  flex-shrink: 0;
 }
+
 .speech-bubble-img {
   width: 100%;
   height: 100%;
   display: block;
   object-fit: contain;
 }
+
 .speech-content {
   position: absolute;
-  top: 18px;
+  top: 22px;
   left: 58px;
   right: 34px;
 
   text-align: center;
-  color: #111;
+  color: var(--ink);
 }
 
 .speech-content p {
-  margin: 0 0 10px;
+  margin: 0 0 8px;
   font-size: 18px;
   font-weight: 500;
   line-height: 1.25;
@@ -175,7 +208,7 @@ h1 {
   align-items: center;
   justify-content: center;
   gap: 18px;
-  margin-top: 8px;
+  margin-top: 7px;
 }
 
 .speech-links a {
@@ -183,45 +216,17 @@ h1 {
   align-items: center;
   gap: 4px;
 
-  color: #111;
+  color: var(--ink);
   text-decoration: none;
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 800;
   white-space: nowrap;
 }
 
-.speech-links svg {
-  width: 17px;
-  height: 17px;
-  stroke: currentColor;
-  stroke-width: 2;
-  fill: none;
-}
-
-.speech-card p {
-  margin: 0 0 6px;
-}
-
-.speech-links {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 4px;
-  font-weight: 800;
-  font-size: 12px;
-}
-
-.speech-links a {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-}
 .speech-links svg,
 .footer-links svg {
-  width: 16px;
-  height: 16px;
+  width: 17px;
+  height: 17px;
   stroke: currentColor;
   stroke-width: 2;
   fill: none;
@@ -229,18 +234,22 @@ h1 {
   stroke-linejoin: round;
 }
 
-.intro-right {
-  padding-top: 114px;
-}
+/* =========================
+   SIDE INFO
+========================= */
 
 .side-block {
   margin-bottom: 34px;
 }
+
 .side-block h2,
-.line-title {
+.line-title,
+.about-section h2,
+.skills-section h2 {
   margin: 0 0 18px;
   padding-bottom: 8px;
   border-bottom: 1.5px solid var(--line);
+
   font-size: 16px;
   line-height: 1;
   font-weight: 900;
@@ -278,62 +287,105 @@ h1 {
   line-height: 1.4;
 }
 
-.about-skill-grid {
-  display: grid;
-  grid-template-columns: 1fr 390px;
-  gap: 56px;
-  margin-top: 38px;
+/* =========================
+   ABOUT + SKILLS
+   intro-left 안에 들어가는 구조 기준
+========================= */
+
+.about-section {
+  margin-top: 0;
 }
 
-.about-block p {
-  margin: 0 0 12px;
+.about-section p {
+  margin: 0 0 14px;
   font-size: 14px;
   line-height: 1.75;
   word-break: keep-all;
 }
 
-.about-block em {
-  font-style: normal;
+.about-section strong {
   color: var(--green-1);
   font-weight: 900;
 }
 
-.skill-bars {
-  list-style: none;
+.skills-section {
+  margin-top: 42px;
 }
-.skill-bars li {
+
+.skill-list {
   display: grid;
-  grid-template-columns: 165px 1fr;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 9px;
-  font-weight: 900;
+  gap: 10px;
 }
-.skill-bars b {
-  display: block;
-  position: relative;
-  height: 12px;
+
+.skill-item {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  align-items: center;
+  gap: 28px;
+}
+
+.skill-item span {
+  font-size: 17px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.skill-bar {
+  height: 14px;
   background: var(--green-4);
 }
-.skill-bars b::before {
-  content: "";
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: var(--level);
+
+.skill-bar i {
+  display: block;
+  height: 100%;
   background: var(--green-1);
 }
 
+.skill-item:nth-child(1) .skill-bar i {
+  width: 82%;
+}
+
+.skill-item:nth-child(2) .skill-bar i {
+  width: 85%;
+}
+
+.skill-item:nth-child(3) .skill-bar i {
+  width: 82%;
+}
+
+.skill-item:nth-child(4) .skill-bar i {
+  width: 88%;
+}
+
+.skill-item:nth-child(5) .skill-bar i {
+  width: 80%;
+}
+
+.skill-item:nth-child(6) .skill-bar i {
+  width: 94%;
+}
+
+/* 이전 구조 호환용: 기존 about-skill-grid를 남겨놨을 경우 */
+.about-skill-grid {
+  display: none;
+}
+
+/* =========================
+   EDUCATION + APPROACH
+========================= */
+
 .training-approach-grid {
   display: grid;
-  grid-template-columns: 1fr 390px;
-  gap: 56px;
+  grid-template-columns: 1fr 430px;
+  gap: 48px;
   margin-top: 54px;
   align-items: start;
 }
 
 .approach-block {
   position: relative;
-  min-height: 250px;
+  width: 430px;
+  min-height: 325px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -344,78 +396,104 @@ h1 {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: fill;
   pointer-events: none;
 }
 
 .approach-content {
   position: relative;
   z-index: 1;
-  width: 72%;
-  padding: 36px 20px;
+  width: 78%;
+  padding: 48px 22px 42px;
   text-align: left;
 }
 
 .approach-content h2 {
-  margin: 0 0 20px;
+  margin: 0 0 34px;
   text-align: center;
-  font-size: 16px;
+  font-size: 19px;
   font-weight: 900;
+  letter-spacing: -0.02em;
 }
 
 .approach-content dl {
   margin: 0;
 }
+
 .approach-content dt {
-  margin-top: 13px;
-  font-size: 12px;
+  margin-top: 24px;
+  font-size: 13px;
   font-weight: 900;
+  letter-spacing: -0.02em;
 }
+
+.approach-content dt:first-child {
+  margin-top: 0;
+}
+
 .approach-content dd {
-  margin: 4px 0 0;
+  width: 100%;
+  margin: 7px 0 0;
   color: #666;
-  font-size: 10.5px;
-  line-height: 1.5;
+  font-size: 12px;
+  line-height: 1.7;
   word-break: keep-all;
 }
+
+/* =========================
+   TECH STACK
+========================= */
 
 .tech-section {
   margin-top: 112px;
 }
+
 .tech-list {
   display: grid;
   gap: 15px;
 }
+
 .tech-list article {
   padding: 18px 22px;
   background: var(--green-1);
 }
+
 .tech-list article:nth-child(2) {
   background: var(--green-2);
 }
+
 .tech-list article:nth-child(3) {
   background: var(--green-3);
 }
+
 .tech-list article:nth-child(4) {
   background: var(--green-4);
 }
+
 .tech-list article:nth-child(5) {
   background: var(--green-5);
 }
+
 .tech-list h3 {
   margin: 0 0 4px;
   font-size: 13px;
   font-weight: 900;
 }
+
 .tech-list p {
   margin: 0;
   font-size: 12px;
   color: #000;
 }
 
+/* =========================
+   PROJECTS
+========================= */
+
 .projects-section {
   margin-top: 124px;
 }
+
 .project-panel {
   margin-top: 52px;
   padding: 18px 18px 24px;
@@ -426,6 +504,7 @@ h1 {
     transparent 20px 126px
   );
 }
+
 .blue-project {
   background-color: var(--blue-project);
 }
@@ -439,12 +518,14 @@ h1 {
   font-size: 11px;
   font-weight: 900;
 }
+
 .project-links {
   display: flex;
   justify-content: flex-end;
   gap: 18px;
   font-size: 11px;
 }
+
 .project-links a::before {
   content: "↗ ";
 }
@@ -462,21 +543,25 @@ h1 {
   font-weight: 500;
   line-height: 1;
 }
+
 .project-subtitle {
   margin: 24px 0 8px !important;
   font-weight: 900;
 }
+
 .project-text p {
   margin: 0 0 14px;
   font-size: 12px;
   line-height: 1.65;
   word-break: keep-all;
 }
+
 .project-text h4 {
   margin: 28px 0 8px;
   font-size: 16px;
   font-weight: 900;
 }
+
 .project-text ul {
   list-style: disc;
   padding-left: 17px;
@@ -484,6 +569,7 @@ h1 {
   font-size: 12px;
   line-height: 1.55;
 }
+
 .project-text li {
   margin-bottom: 3px;
 }
@@ -493,18 +579,22 @@ h1 {
   border-collapse: collapse;
   font-size: 12px;
 }
+
 .used-table tr {
   border-top: 1.5px solid rgba(0, 0, 0, 0.75);
 }
+
 .used-table tr:last-child {
   border-bottom: 1.5px solid rgba(0, 0, 0, 0.75);
 }
+
 .used-table th {
   width: 112px;
   padding: 8px 0;
   text-align: left;
   font-weight: 500;
 }
+
 .used-table td {
   padding: 8px 0;
 }
@@ -515,25 +605,33 @@ h1 {
   box-shadow: 0 12px 18px rgba(0, 0, 0, 0.18);
   background: #fff;
 }
+
 .project-image img {
   width: 100%;
   max-height: 470px;
   object-fit: cover;
   object-position: top;
 }
+
 .blue-project .project-image img {
   max-height: 360px;
 }
+
+/* =========================
+   FOOTER
+========================= */
 
 .footer {
   margin-top: 100px;
   text-align: center;
   font-size: 12px;
 }
+
 .footer > p {
   font-weight: 900;
   margin: 0 0 20px;
 }
+
 .footer-links {
   display: flex;
   justify-content: center;
@@ -541,18 +639,23 @@ h1 {
   margin-bottom: 24px;
   font-weight: 900;
 }
+
 .footer-links a::before {
   margin-right: 4px;
 }
+
 .footer-links a:nth-child(1)::before {
   content: "◖";
 }
+
 .footer-links a:nth-child(2)::before {
   content: "▧";
 }
+
 .footer-links a:nth-child(3)::before {
   content: "◌";
 }
+
 .footer-tags {
   display: flex;
   justify-content: center;
@@ -561,26 +664,43 @@ h1 {
   font-weight: 900;
 }
 
+/* =========================
+   RESPONSIVE
+========================= */
+
 @media (max-width: 920px) {
   .portfolio-page {
     padding: 36px 28px 56px;
   }
+
   .folder-nav {
     right: 28px;
   }
+
   .intro-section,
-  .about-skill-grid,
   .training-approach-grid,
   .project-body {
     grid-template-columns: 1fr;
   }
+
   .intro-right {
     padding-top: 16px;
   }
+
+  .training-approach-grid {
+    gap: 36px;
+  }
+
+  .approach-block {
+    width: 100%;
+    max-width: 430px;
+  }
+
   .project-meta {
     grid-template-columns: 1fr;
     gap: 8px;
   }
+
   .project-links {
     justify-content: flex-start;
   }
@@ -590,31 +710,44 @@ h1 {
   .page-wrap {
     padding: 36px 0;
   }
+
   .portfolio-page {
     width: calc(100vw - 24px);
+    padding: 32px 20px 48px;
   }
+
   .folder-nav {
     display: none;
   }
+
   h1 {
     font-size: 32px;
   }
+
   .profile-row {
     flex-direction: column;
+    gap: 18px;
   }
+
   .speech-card {
     width: 100%;
+    max-width: 340px;
+    margin-left: 0;
   }
-  .skill-bars li {
+
+  .skill-item {
     grid-template-columns: 1fr;
     gap: 5px;
   }
+
   .project-panel {
     padding: 14px;
   }
+
   .project-text h3 {
     font-size: 30px;
   }
+
   .footer-tags {
     flex-direction: column;
     gap: 8px;
