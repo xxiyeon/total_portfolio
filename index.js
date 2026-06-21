@@ -123,3 +123,67 @@ window.addEventListener("scroll", updateActiveNav, { passive: true });
 window.addEventListener("resize", updateActiveNav);
 
 updateActiveNav();
+const introCover = document.querySelector("#introCover");
+const introEnter = document.querySelector(".intro-enter");
+
+if (introCover && introEnter) {
+  document.body.classList.add("is-intro-open");
+
+  let isMovingToMain = false;
+
+  const moveToMainPage = () => {
+    if (isMovingToMain) return;
+
+    isMovingToMain = true;
+    introEnter.classList.remove("is-pressed");
+
+    // scale(0.96)에서 원래 크기로 복귀하는 애니메이션을 먼저 보여줌
+    window.setTimeout(() => {
+      introCover.classList.add("is-leaving");
+      document.body.classList.remove("is-intro-open");
+
+      const portfolioPage = document.querySelector(".portfolio-page");
+
+      if (portfolioPage) {
+        const top = portfolioPage.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({
+          top: Math.max(0, top - 1),
+          behavior: "auto",
+        });
+      }
+
+      // fade-out 끝난 뒤 DOM에서 제거
+      window.setTimeout(() => {
+        introCover.remove();
+      }, 480);
+    }, 240);
+  };
+
+  introEnter.addEventListener("pointerdown", (event) => {
+    introEnter.classList.add("is-pressed");
+
+    if (event.pointerId !== undefined) {
+      introEnter.setPointerCapture(event.pointerId);
+    }
+  });
+
+  introEnter.addEventListener("pointerup", () => {
+    moveToMainPage();
+  });
+
+  introEnter.addEventListener("pointercancel", () => {
+    introEnter.classList.remove("is-pressed");
+  });
+
+  introEnter.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      introEnter.classList.add("is-pressed");
+    }
+  });
+
+  introEnter.addEventListener("keyup", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      moveToMainPage();
+    }
+  });
+}
