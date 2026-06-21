@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Darumadrop+One&family=Doppio+One&display=swap");
 :root {
   --green-1: #58af7b;
   --green-2: #88cfa5;
@@ -314,14 +315,14 @@ h1 {
 
 .skill-list {
   display: grid;
-  gap: 10px;
+  gap: 12px;
 }
 
 .skill-item {
   display: grid;
-  grid-template-columns: 180px 1fr;
+  grid-template-columns: 180px 236px;
   align-items: center;
-  gap: 28px;
+  column-gap: 28px;
 }
 
 .skill-item span {
@@ -331,10 +332,11 @@ h1 {
 }
 
 .skill-bar {
-  height: 14px;
-  background: var(--green-4);
+  width: 236px;
+  height: 12px;
+  background: #cce3d5;
+  overflow: hidden;
 }
-
 .skill-bar i {
   display: block;
   height: 100%;
@@ -404,19 +406,30 @@ h1 {
   position: relative;
   z-index: 1;
   width: 78%;
-  padding: 48px 22px 42px;
+  height: 100%;
+  padding: 0;
   text-align: left;
 }
 
 .approach-content h2 {
-  margin: 0 0 34px;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+
   text-align: center;
   font-size: 19px;
   font-weight: 900;
   letter-spacing: -0.02em;
+  white-space: nowrap;
 }
 
 .approach-content dl {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
   margin: 0;
 }
 
@@ -432,7 +445,6 @@ h1 {
 }
 
 .approach-content dd {
-  width: 100%;
   margin: 7px 0 0;
   color: #666;
   font-size: 12px;
