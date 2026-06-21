@@ -413,8 +413,8 @@ h1 {
 
 .approach-content h2 {
   position: absolute;
-  top: 14px;
-  left: 50%;
+  top: 12px;
+  left: 53%;
   transform: translateX(-50%);
 
   margin: 0;
