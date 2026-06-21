@@ -7,6 +7,10 @@ const SCROLL_EXTRA = {
   projects: 300,
 };
 
+// ABOUT 클릭 시 흰 종이 자체가 아니라 책갈피 탭의 시작점이 화면 최상단에 붙도록 보정합니다.
+// .portfolio-page padding-top 38px + .folder-nav margin-top -61px = -23px 위치 차이
+const ABOUT_NAV_OFFSET = 23;
+
 const getSectionId = (link) => link.getAttribute("href").replace("#", "");
 
 const getAbsoluteTop = (element) => {
@@ -15,7 +19,7 @@ const getAbsoluteTop = (element) => {
 
 const getScrollTop = (id) => {
   if (id === "about") {
-    return Math.max(0, getAbsoluteTop(portfolioPage) - 1);
+    return Math.max(0, getAbsoluteTop(portfolioPage) - ABOUT_NAV_OFFSET);
   }
 
   const section = document.getElementById(id);
@@ -147,7 +151,7 @@ if (introCover && introEnter) {
       if (portfolioPage) {
         const top = portfolioPage.getBoundingClientRect().top + window.scrollY;
         window.scrollTo({
-          top: Math.max(0, top - 1),
+          top: Math.max(0, top - ABOUT_NAV_OFFSET),
           behavior: "auto",
         });
       }
@@ -187,3 +191,33 @@ if (introCover && introEnter) {
     }
   });
 }
+
+const footerCopyButtons = [...document.querySelectorAll(".footer-copy")];
+
+footerCopyButtons.forEach((button) => {
+  button.addEventListener("click", async () => {
+    const text = button.dataset.copy;
+
+    if (!text) return;
+
+    try {
+      await navigator.clipboard.writeText(text);
+    } catch (error) {
+      const tempInput = document.createElement("textarea");
+      tempInput.value = text;
+      tempInput.setAttribute("readonly", "");
+      tempInput.style.position = "fixed";
+      tempInput.style.left = "-9999px";
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand("copy");
+      tempInput.remove();
+    }
+
+    button.classList.add("is-copied");
+
+    window.setTimeout(() => {
+      button.classList.remove("is-copied");
+    }, 900);
+  });
+});

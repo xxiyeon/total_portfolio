@@ -92,7 +92,7 @@ li {
   gap: 10px;
 
   width: calc(100% + 128px);
-  height: 86px;
+  height: 92px;
   margin-top: -61px;
   margin-left: -64px;
   margin-bottom: 0;
@@ -101,10 +101,14 @@ li {
   box-sizing: border-box;
   isolation: isolate;
 
+  /*
+    위 30px은 body 초록 배경과 이어지고,
+    아래 영역은 portfolio-page의 흰 종이와 이어지게 처리.
+  */
   background: linear-gradient(
     to bottom,
-    transparent 0 32px,
-    var(--paper) 32px 100%
+    var(--green-1) 0 30px,
+    var(--paper) 30px 100%
   );
 
   z-index: 100;
@@ -112,19 +116,7 @@ li {
 }
 
 .folder-nav::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-
-  width: 100vw;
-  height: 32px;
-
-  transform: translateX(-50%);
-  background: var(--green-1);
-
-  z-index: 0;
-  pointer-events: none;
+  content: none;
 }
 
 .folder-nav a {
@@ -492,11 +484,13 @@ h1 {
 
 .approach-content h2 {
   position: absolute;
-  top: 10px;
-  left: 53%;
-  transform: translateX(-50%);
+  top: 18px;
+  left: 0;
+  right: 0;
+  transform: none;
 
   margin: 0;
+  text-align: center;
   font-size: 19px;
   font-weight: 700;
   line-height: 1;
@@ -506,25 +500,25 @@ h1 {
 
 .approach-content dl {
   position: absolute;
-  top: 70px;
-  left: 46px;
-  right: 42px;
+  top: 84px;
+  left: 64px;
+  right: 56px;
   margin: 0;
 }
 
 .approach-content dt {
   margin: 0;
-  font-size: 14.5px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 1.28;
   letter-spacing: -0.02em;
 }
 
 .approach-content dd {
-  margin: 6px 0 15px;
+  margin: 6px 0 14px;
   color: #666;
-  font-size: 13.5px;
-  line-height: 1.5;
+  font-size: 13px;
+  line-height: 1.48;
   word-break: keep-all;
 }
 
@@ -823,10 +817,55 @@ h1 {
 .footer-tags {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 42px;
   color: var(--green-1);
   font-size: 14px;
   font-weight: 700;
+}
+
+.footer-copy {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+
+  padding: 0;
+  border: 0;
+  background: none;
+
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  white-space: nowrap;
+
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.footer-copy:hover {
+  color: var(--ink);
+  transform: translateY(-1px);
+}
+
+.footer-copy.is-copied::after {
+  content: "copied";
+  position: absolute;
+  left: 50%;
+  bottom: -22px;
+  transform: translateX(-50%);
+
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: var(--green-1);
+  color: var(--paper);
+
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.3;
+  pointer-events: none;
 }
 
 /* =========================
@@ -985,7 +1024,7 @@ h1 {
     gap: 6px;
 
     width: calc(100% + 40px);
-    height: 78px;
+    height: 82px;
     margin-top: -57px;
     margin-left: -20px;
     margin-bottom: 0;
@@ -993,13 +1032,9 @@ h1 {
 
     background: linear-gradient(
       to bottom,
-      transparent 0 30px,
+      var(--green-1) 0 30px,
       var(--paper) 30px 100%
     );
-  }
-
-  .folder-nav::before {
-    height: 30px;
   }
 
   .folder-nav a {
