@@ -10,6 +10,7 @@
   --muted: #777777;
   --line: #1f1f1f;
   --paper: #ffffff;
+  --active-tab: #c4eed4;
   --blue-project: #d7e7ef;
 }
 
@@ -23,17 +24,11 @@ html {
 
 body {
   margin: 0;
-  font-family:
-    "Pretendard",
-    -apple-system,
-    BlinkMacSystemFont,
-    system-ui,
-    sans-serif;
+  font-family: "Andika", "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   color: var(--ink);
   background: var(--green-1);
   font-size: 14px;
   line-height: 1.55;
-  font-family: "Andika", "Pretendard", sans-serif;
 }
 .project_font {
   font-family: "Darumadrop One", "Pretendard", sans-serif;
@@ -81,21 +76,18 @@ li {
 /* =========================
    NAV
 ========================= */
-.folder-nav a.is-active {
-  background: #c4eed4;
-  color: #111;
-}
 .folder-nav {
   position: sticky;
   top: 0;
+
   display: flex;
   justify-content: flex-end;
   gap: 10px;
 
   width: 100%;
-  padding-right: 86px;
   margin-top: -61px;
   margin-bottom: 38px;
+  padding-right: 86px;
 
   z-index: 100;
   pointer-events: none;
@@ -107,8 +99,10 @@ li {
   padding: 7px 16px 0;
 
   text-align: center;
+  font-family: "Darumadrop One", "Pretendard", sans-serif;
   font-size: 10px;
   font-weight: 700;
+  line-height: 1;
 
   color: var(--green-1);
   background: var(--paper);
@@ -120,6 +114,11 @@ li {
   transition:
     background-color 0.2s ease,
     color 0.2s ease;
+}
+
+.folder-nav a.is-active {
+  color: var(--ink);
+  background: var(--active-tab);
 }
 
 /* =========================
@@ -393,10 +392,6 @@ h1 {
   width: 94%;
 }
 
-/* 이전 구조 호환용: 기존 about-skill-grid를 남겨놨을 경우 */
-.about-skill-grid {
-  display: none;
-}
 
 /* =========================
    EDUCATION + APPROACH
@@ -435,7 +430,7 @@ h1 {
 
 .approach-content h2 {
   position: absolute;
-  top: 11px;
+  top: 10px;
   left: 53%;
   transform: translateX(-50%);
 
@@ -719,7 +714,7 @@ h1 {
   }
 
   .folder-nav {
-    right: 28px;
+    padding-right: 32px;
   }
 
   .intro-section,
@@ -762,7 +757,18 @@ h1 {
   }
 
   .folder-nav {
-    display: none;
+    justify-content: center;
+    gap: 6px;
+    margin-top: -57px;
+    margin-bottom: 30px;
+    padding-right: 0;
+  }
+
+  .folder-nav a {
+    min-width: 96px;
+    height: 30px;
+    padding: 8px 12px 0;
+    font-size: 9px;
   }
 
   h1 {

@@ -1,11 +1,6 @@
-// Static portfolio page. Add interactions here if needed.
-const navLinks = document.querySelectorAll(".folder-nav a");
-
-const sections = [...navLinks]
-  .map((link) => {
-    const id = link.getAttribute("href");
-    return document.querySelector(id);
-  })
+const navLinks = [...document.querySelectorAll(".folder-nav a")];
+const sections = navLinks
+  .map((link) => document.querySelector(link.getAttribute("href")))
   .filter(Boolean);
 
 const activateNav = (id) => {
@@ -14,19 +9,21 @@ const activateNav = (id) => {
   });
 };
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        activateNav(entry.target.id);
-      }
-    });
-  },
-  {
-    root: null,
-    rootMargin: "-30% 0px -55% 0px",
-    threshold: 0,
-  },
-);
+const updateActiveNav = () => {
+  const checkLine = window.scrollY + window.innerHeight * 0.33;
+  let currentSection = sections[0];
 
-sections.forEach((section) => observer.observe(section));
+  sections.forEach((section) => {
+    if (section.offsetTop <= checkLine) {
+      currentSection = section;
+    }
+  });
+
+  if (currentSection) {
+    activateNav(currentSection.id);
+  }
+};
+
+window.addEventListener("scroll", updateActiveNav, { passive: true });
+window.addEventListener("resize", updateActiveNav);
+updateActiveNav();
