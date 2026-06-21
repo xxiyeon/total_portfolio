@@ -139,22 +139,20 @@ if (introCover && introEnter) {
 
     // scale(0.96)에서 원래 크기로 복귀하는 애니메이션을 먼저 보여줌
     window.setTimeout(() => {
-      introCover.classList.add("is-leaving");
-      document.body.classList.remove("is-intro-open");
+  introCover.classList.add("is-leaving");
+  document.body.classList.remove("is-intro-open");
 
-      if (portfolioPage) {
-        window.scrollTo({
-          top: 0,
-          behavior: "auto",
-        });
-      }
+  if (portfolioPage) {
+    window.scrollTo({
+      top: 0,
+      behavior: "auto",
+    });
+  }
 
-      // fade-out 끝난 뒤 DOM에서 제거
-      window.setTimeout(() => {
-        introCover.remove();
-      }, 1120);
-    }, 240);
-  };
+  window.setTimeout(() => {
+    introCover.remove();
+  }, 760);
+}, 120);
 
   introEnter.addEventListener("pointerdown", (event) => {
     introEnter.classList.add("is-pressed");

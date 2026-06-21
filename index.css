@@ -1101,11 +1101,52 @@ body.is-intro-open {
 /* 왼쪽 위로 보자기 잡아 올리는 효과 */
 .intro-cover.is-leaving {
   pointer-events: none;
-  animation: introClothExit 1.05s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+  animation: introClothExit 0.68s cubic-bezier(0.72, 0, 0.2, 1) forwards;
 }
 
 .intro-cover.is-leaving::before {
-  animation: introClothShadow 1.05s ease forwards;
+  animation: introClothShadow 0.68s ease forwards;
+}
+
+@keyframes introClothExit {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    border-bottom-right-radius: 0;
+  }
+
+  34% {
+    opacity: 1;
+    transform: translate(-10px, -14px) rotate(-0.8deg) scale(0.99);
+    clip-path: polygon(0 0, 100% 0, 96% 94%, 0 100%);
+    border-bottom-right-radius: 90px 70px;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-34vw, -40vh) rotate(-6deg) scale(0.52);
+    clip-path: polygon(0 0, 48% 0, 0 48%, 0 0);
+    border-bottom-right-radius: 240px;
+  }
+}
+
+@keyframes introClothShadow {
+  0% {
+    opacity: 0;
+  }
+
+  28% {
+    opacity: 0.55;
+  }
+
+  70% {
+    opacity: 0.42;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 .intro-cover.is-leaving .intro-enter {
