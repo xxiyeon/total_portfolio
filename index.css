@@ -54,7 +54,8 @@ li {
 
 .portfolio-page {
   position: relative;
-  width: min(1024px, calc(100vw - 52px));
+  width: min(1157px, calc(100vw - 52px));
+  box-sizing: border-box;
   margin: 0 auto;
   padding: 38px 64px 66px;
   background: var(--paper);
@@ -154,7 +155,7 @@ h1 {
 }
 .speech-content {
   position: absolute;
-  top: 34px;
+  top: 18px;
   left: 58px;
   right: 34px;
 
