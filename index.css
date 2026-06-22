@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Darumadrop+One&family=Doppio+One&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Baloo+Thambi+2:wght@400;500;600;700&family=Darumadrop+One&family=Doppio+One&display=swap");
 :root {
   --green-1: #58af7b;
   --green-2: #88cfa5;
@@ -653,39 +653,70 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 14px;
+  gap: 10px;
 
   min-width: max-content;
 
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.2;
+  font-family: "Baloo Thambi 2", "Pretendard", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
 }
 
-.project-links a,
 .project-type {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
 
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 700;
+  line-height: 1.2;
   white-space: nowrap;
 }
 
 .project-links a {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  min-width: 74px;
+  height: 30px;
+  padding: 8px 13px 7px;
+
+  font-family: "Baloo Thambi 2", "Pretendard", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+
+  color: var(--ink);
+  white-space: nowrap;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+
   transition:
-    color 0.2s ease,
     transform 0.2s ease,
     opacity 0.2s ease;
 }
-
-.project-links a:hover {
-  color: var(--green-1);
-  transform: translateY(-1px);
+.green-project .project-links a {
+  background-image: url("./assets/brush-yellow.png");
 }
 
+.blue-project .project-links a {
+  background-image: url("./assets/brush-blue.png");
+}
+.project-links a:hover {
+  transform: translateY(-1px) rotate(-1deg);
+  opacity: 0.85;
+}
+.project-links a .link-icon {
+  width: 13px;
+  height: 13px;
+}
 .project-body {
   display: block;
 }
@@ -769,13 +800,15 @@ h1 {
 }
 
 .project-image img {
-  width: 100%;
-  max-height: 540px;
-  object-fit: cover;
-  object-position: top;
-  display: block;
+  transition:
+    transform 0.28s ease,
+    opacity 0.28s ease;
+  transform-origin: center;
 }
-
+.project-image:hover img {
+  transform: scale(0.96);
+  opacity: 0.92;
+}
 /* 프로젝트2 WithDay 이미지만 따로 조정 */
 .project-image-withday {
   bottom: 120px;
