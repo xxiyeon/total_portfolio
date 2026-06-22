@@ -2267,11 +2267,35 @@ body.is-intro-open {
 }
 /* APPROACH 위치 조정 */
 .approach-block {
-  width: 430px;
-  max-width: 430px;
+  width: 470px;
+  max-width: 470px;
 
   margin-left: auto;
   margin-right: 0;
+  aspect-ratio: 430 / 300;
 
   transform: translate(24px, -12px);
+}
+@media (max-width: 920px) {
+  .approach-block {
+    width: min(470px, 100%);
+    max-width: 470px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    transform: translate(0, -12px);
+  }
+}
+
+@media (max-width: 430px) {
+  .approach-block {
+    width: 100%;
+    max-width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    transform: translate(0, -8px);
+  }
 }
