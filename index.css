@@ -841,8 +841,9 @@ h1 {
   FOOTER
 ========================= */
 .footer {
-  margin: 90px 0 0;
-  padding-top: 42px;
+  margin: 72px 0 0;
+  padding-top: 46px;
+  padding-bottom: 12px;
   border-top: 1px solid #cdcdcd;
 
   text-align: center;
@@ -851,14 +852,14 @@ h1 {
 
 .footer > p {
   font-weight: 700;
-  margin: 0 0 22px;
+  margin: 0 0 26px;
 }
 
 .footer-links {
   display: flex;
   justify-content: center;
-  gap: 28px;
-  margin-bottom: 24px;
+  gap: 30px;
+  margin-bottom: 28px;
 
   font-weight: 400;
 }
@@ -886,7 +887,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 42px;
+  gap: 46px;
   color: var(--green-1);
   font-size: 14px;
   font-weight: 700;
