@@ -480,13 +480,16 @@ h1 {
   position: relative;
 
   width: 100%;
-  max-width: none;
+  max-width: 400px;
   aspect-ratio: 430 / 300;
   height: auto;
 
   flex-shrink: 0;
   overflow: visible;
+
   margin-top: -6px;
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .vegetable-frame {
@@ -512,8 +515,8 @@ h1 {
 
 .approach-content h2 {
   position: absolute;
-  top: 5px; /*채소 제목 위치 맞추기*/
-  left: 17px;
+  top: 4%;
+  left: 0;
   right: 0;
 
   margin: 0;
@@ -527,13 +530,14 @@ h1 {
 }
 .approach-content dl {
   position: absolute;
-  top: 60px;
-  left: 60px;
-  right: 58px;
-  bottom: 28px;
+
+  top: 21%;
+  left: 13%;
+  right: 11%;
+  bottom: 9%;
 
   margin: 0;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .approach-content dt {
@@ -554,11 +558,12 @@ h1 {
   margin: 0;
 
   color: #666;
-  font-size: 11.8px;
-  line-height: 1.4;
-  letter-spacing: -0.03em;
+  font-size: 11.4px;
+  line-height: 1.38;
+  letter-spacing: -0.04em;
+
   word-break: keep-all;
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
 }
 
 .approach-content dd:last-child {
@@ -1824,34 +1829,44 @@ body.is-intro-open {
   }
 
   .approach-block {
-    width: 100%;
-    max-width: 100%;
+    width: calc(100% - 44px);
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
     aspect-ratio: 430 / 300;
   }
 
   .approach-content h2 {
-    top: 2%;
-    left: 4%;
-    font-size: clamp(15px, 5vw, 19px);
+    top: 4%;
+    left: 0;
+    right: 0;
+    font-size: 18px;
   }
 
   .approach-content dl {
-    top: 19%;
-    left: 12%;
-    right: 10%;
-    bottom: 8%;
+    top: 21%;
+    left: 13%;
+    right: 11%;
+    bottom: 9%;
+    overflow: visible;
   }
 
   .approach-content dt {
-    font-size: clamp(11px, 3.5vw, 14px);
+    font-size: 12px;
     line-height: 1.22;
+    letter-spacing: -0.05em;
   }
 
   .approach-content dd {
-    font-size: clamp(9px, 2.8vw, 11.8px);
-    line-height: 1.35;
+    font-size: 10.4px;
+    line-height: 1.34;
+    letter-spacing: -0.055em;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
   }
-
+  .approach-content dt:not(:first-of-type) {
+    margin-top: 7px;
+  }
   .footer {
     margin-top: 72px;
     padding-top: 34px;
