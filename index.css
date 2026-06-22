@@ -103,18 +103,12 @@ li {
   isolation: isolate;
   overflow: visible;
 
-  background: linear-gradient(
-    to bottom,
-    var(--green-1) 0 calc(var(--folder-top-space) + var(--folder-tab-height)),
-    var(--paper) calc(var(--folder-top-space) + var(--folder-tab-height)) 100%
-  );
+  background: var(--paper);
+  box-shadow: inset 0 calc(var(--folder-top-space) + var(--folder-tab-height)) 0 0 var(--green-1);
+  transform: translateZ(0);
+  backface-visibility: hidden;
 
   pointer-events: none;
-}
-
-.folder-nav::before,
-.folder-nav::after {
-  content: none;
 }
 
 .folder-nav a {
@@ -158,7 +152,7 @@ li {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 410px;
   gap: 56px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .intro-left {
@@ -1239,7 +1233,7 @@ body.is-intro-open {
     padding: var(--folder-top-space) 32px 0 48px;
   }
 
-  .intro-section {
+ .intro-section {
     grid-template-columns: minmax(0, 1fr) 360px;
     gap: 42px;
   }
@@ -1257,10 +1251,6 @@ body.is-intro-open {
     top: 22px;
     left: 48px;
     right: 26px;
-  }
-
-  .approach-block {
-    width: 400px;
   }
 
   .project-text {
@@ -1300,7 +1290,7 @@ body.is-intro-open {
     font-size: 13px;
   }
 
-  .intro-section {
+ .intro-section {
     grid-template-columns: 1fr;
     gap: 42px;
   }
@@ -1319,11 +1309,6 @@ body.is-intro-open {
   .speech-card {
     margin-left: 0;
     width: min(360px, calc(100vw - 96px));
-  }
-
-  .approach-block {
-    width: min(430px, 100%);
-    margin: 0 auto;
   }
 
   .tech-section,
@@ -1611,35 +1596,6 @@ body.is-intro-open {
     word-break: keep-all;
   }
 
-  .approach-block {
-    width: calc(100% - 44px);
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    aspect-ratio: 430 / 300;
-  }
-
-  .approach-content h2 {
-    top: 4%;
-    left: 0;
-    right: 0;
-    font-size: 18px;
-  }
-
-  .approach-content dl {
-    top: 21%;
-    left: 13%;
-    right: 11%;
-    bottom: 9%;
-    overflow: visible;
-  }
-
-  .approach-content dt {
-    font-size: 12px;
-    line-height: 1.22;
-    letter-spacing: -0.05em;
-  }
-
   .approach-content dd {
     font-size: 10.4px;
     line-height: 1.34;
@@ -1746,17 +1702,6 @@ body.is-intro-open {
 
   .project-brush-links {
     bottom: -32px;
-  }
-
-  .approach-content dl {
-    top: 20%;
-    left: 11%;
-    right: 9%;
-    bottom: 7%;
-  }
-
-  .approach-content dt:not(:first-of-type) {
-    margin-top: 6px;
   }
 
   .intro-enter {
@@ -1901,18 +1846,7 @@ body.is-intro-open {
    CLEAN INTRO / RIGHT COLUMN
 ========================= */
 
-/* 왼쪽: 프로필/소개/스킬/교육, 오른쪽: 학력/경력/자격증/APPROACH */
-.intro-section {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 410px;
-  gap: 56px;
-  align-items: stretch;
-}
-
-.intro-left {
-  min-width: 0;
-}
-
+/* 오른쪽: 학력/경력/자격증/APPROACH */
 .intro-right {
   display: flex;
   flex-direction: column;
@@ -2022,7 +1956,7 @@ body.is-intro-open {
 
 /* 태블릿 이하에서는 좌우 섹션을 세로로 쌓음 */
 @media (max-width: 920px) {
-  .intro-section {
+ .intro-section {
     grid-template-columns: 1fr;
     gap: 42px;
   }
@@ -2093,47 +2027,4 @@ body.is-intro-open {
   .approach-side-block .approach-content dd {
     font-size: 7.8px;
   }
-}
-/* =========================
-   FOLDER NAV SEAM FIX
-========================= */
-
-.folder-nav {
-  background: var(--paper);
-  transform: translateZ(0);
-  backface-visibility: hidden;
-}
-
-/* 초록색 영역을 gradient가 아니라 별도 레이어로 분리 */
-.folder-nav::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-
-  height: calc(var(--folder-top-space) + var(--folder-tab-height) - 2px);
-
-  background: var(--green-1);
-  z-index: 0;
-  pointer-events: none;
-}
-
-/* 초록/흰색 경계 부분을 흰색으로 2px 덮어서 깜빡임 제거 */
-.folder-nav::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: calc(var(--folder-top-space) + var(--folder-tab-height) - 2px);
-
-  height: 4px;
-
-  background: var(--paper);
-  z-index: 1;
-  pointer-events: none;
-}
-
-.folder-nav a {
-  z-index: 2;
 }
