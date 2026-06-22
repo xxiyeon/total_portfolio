@@ -336,16 +336,8 @@ h1 {
   margin-bottom: 0;
 }
 
-.timeline-item {
-  margin-bottom: 30px;
-}
-
 .timeline-item:last-child {
   margin-bottom: 0;
-}
-
-.training-item {
-  margin-bottom: 32px;
 }
 
 .training-item:last-child {
@@ -356,9 +348,20 @@ h1 {
   display: grid;
   grid-template-columns: 92px 1fr;
   gap: 28px;
-  margin-bottom: 24px;
 }
 
+.timeline-item {
+  margin-bottom: 30px;
+}
+
+.training-item {
+  margin-bottom: 32px;
+}
+
+.timeline-item:last-child,
+.training-item:last-child {
+  margin-bottom: 0;
+}
 .timeline-item span,
 .training-item span {
   font-size: 15px;
@@ -722,13 +725,6 @@ h1 {
   transition:
     transform 0.2s ease,
     opacity 0.2s ease;
-}
-.green-project .project-links a {
-  background-image: url("./assets/brush-yellow.png");
-}
-
-.blue-project .project-links a {
-  background-image: url("./assets/brush-blue.png");
 }
 .project-links a:hover {
   transform: translateY(-1px) rotate(-1deg);
@@ -1367,16 +1363,6 @@ body.is-intro-open {
 .project-brush-link:hover {
   transform: translateY(-1px);
   opacity: 0.9;
-}
-
-.project-brush-link .link-icon {
-  width: 13px;
-  height: 13px;
-}
-
-.project-brush-link:hover {
-  transform: translateY(-1px) rotate(-1deg);
-  opacity: 0.86;
 }
 
 .project-brush-link .link-icon {
