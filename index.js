@@ -5,6 +5,7 @@ const SCROLL_EXTRA = {
   about: 0,
   "tech-stack": 80,
   projects: 180,
+  contact: 0,
 };
 
 const getSectionId = (link) => link.getAttribute("href").replace("#", "");
@@ -16,6 +17,13 @@ const getAbsoluteTop = (element) => {
 const getScrollTop = (id) => {
   if (id === "about") {
     return 0;
+  }
+
+  if (id === "contact") {
+    return Math.max(
+      0,
+      document.documentElement.scrollHeight - window.innerHeight,
+    );
   }
 
   const section = document.getElementById(id);
@@ -65,6 +73,12 @@ const updateActiveNav = () => {
   const currentY = window.scrollY + 8;
   const techTop = getScrollTop("tech-stack");
   const projectsTop = getScrollTop("projects");
+  const contactTop = getScrollTop("contact") - 12;
+
+  if (currentY >= contactTop) {
+    activateNav("contact");
+    return;
+  }
 
   if (currentY >= projectsTop) {
     activateNav("projects");
