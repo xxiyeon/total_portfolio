@@ -84,7 +84,7 @@ li {
 ========================= */
 .folder-nav {
   --folder-tab-height: 30px;
-  --folder-top-space: 8px; /* 추가: 책갈피 위 초록색 여백 */
+  --folder-top-space: 15px; /* 추가: 책갈피 위 초록색 여백 */
 
   position: sticky;
   top: 0;
@@ -789,14 +789,17 @@ h1 {
    FOOTER
 ========================= */
 .footer {
-  margin-top: 100px;
+  margin: 90px 0 0;
+  padding-top: 42px;
+  border-top: 1px solid #cdcdcd;
+
   text-align: center;
   font-size: 14px;
 }
 
 .footer > p {
   font-weight: 700;
-  margin: 0 0 20px;
+  margin: 0 0 22px;
 }
 
 .footer-links {
