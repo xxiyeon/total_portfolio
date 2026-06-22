@@ -1927,8 +1927,10 @@ body.is-intro-open {
 /* 오른쪽 마지막 채소 프레임 섹션 */
 .approach-side-block {
   width: 100%;
-  margin-top: 88px;
+  margin-top: -2px;
   margin-bottom: 0;
+
+  transform: translateY(150px);
 }
 
 /* 오른쪽 섹션 너비 100% 사용 */
