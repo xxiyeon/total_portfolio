@@ -879,7 +879,6 @@ h1 {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M12%20.5C5.65.5.5%205.65.5%2012c0%205.08%203.29%209.39%207.86%2010.91.58.11.79-.25.79-.56v-2.02c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7%201.15.08%201.75%201.18%201.75%201.18%201.02%201.75%202.68%201.24%203.33.95.1-.74.4-1.24.72-1.53-2.56-.29-5.25-1.28-5.25-5.69%200-1.26.45-2.29%201.18-3.1-.12-.29-.51-1.47.11-3.06%200%200%20.96-.31%203.16%201.18A10.9%2010.9%200%200%201%2012%206.12c.98%200%201.96.13%202.88.39%202.19-1.49%203.15-1.18%203.15-1.18.63%201.59.24%202.77.12%203.06.74.81%201.18%201.84%201.18%203.1%200%204.42-2.7%205.39-5.27%205.68.41.36.77%201.06.77%202.14v3.17c0%20.31.21.68.8.56A11.51%2011.51%200%200%200%2023.5%2012C23.5%205.65%2018.35.5%2012%20.5Z%22%2F%3E%3C%2Fsvg%3E");
 }
 
-
 .notion-icon {
   mask-image: url("data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Crect%20x%3D%224%22%20y%3D%224%22%20width%3D%2216%22%20height%3D%2216%22%20rx%3D%221.5%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222%22%2F%3E%3Cpath%20d%3D%22M9%2017V7L15%2017V7%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E");
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Crect%20x%3D%224%22%20y%3D%224%22%20width%3D%2216%22%20height%3D%2216%22%20rx%3D%221.5%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222%22%2F%3E%3Cpath%20d%3D%22M9%2017V7L15%2017V7%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E");
@@ -2091,4 +2090,18 @@ body.is-intro-open {
     font-size: 7.8px;
   }
 }
+/* =========================
+   APPROACH FRAME RATIO FIX
+========================= */
 
+.approach-side-block .approach-block {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 920 / 812;
+}
+
+.approach-side-block .vegetable-frame {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
