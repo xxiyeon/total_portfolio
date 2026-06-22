@@ -2265,4 +2265,13 @@ body.is-intro-open {
     line-height: 1.12;
   }
 }
+/* APPROACH 위치 조정 */
+.approach-block {
+  width: 430px;
+  max-width: 430px;
 
+  margin-left: auto;
+  margin-right: 0;
+
+  transform: translate(24px, -12px);
+}
