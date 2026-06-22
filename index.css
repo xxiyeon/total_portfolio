@@ -530,7 +530,7 @@ h1 {
   position: relative;
   margin-top: 64px;
   padding: 28px 28px 76px;
-
+  padding-top: 10px;
   background-color: var(--green-4);
   background-image: url("./assets/project-green.png");
   background-repeat: repeat;
@@ -554,9 +554,7 @@ h1 {
   grid-template-columns: 150px minmax(220px, 1fr) auto;
   align-items: center;
   gap: 14px;
-
-  margin-bottom: 24px;
-
+  margin-bottom: 50px;
   font-family: "Andika", "Pretendard", sans-serif;
   font-size: 14px;
   font-weight: 400;
