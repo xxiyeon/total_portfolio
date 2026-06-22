@@ -508,8 +508,8 @@ h1 {
 
 .approach-content h2 {
   position: absolute;
-  top: 21px; /*채소 제목 위치 맞추기*/
-  left: 0;
+  top: 15px; /*채소 제목 위치 맞추기*/
+  left: 2;
   right: 0;
 
   margin: 0;
