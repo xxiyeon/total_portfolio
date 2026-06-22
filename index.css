@@ -2299,3 +2299,156 @@ body.is-intro-open {
     transform: translate(0, -8px);
   }
 }
+
+/* =========================
+   RIGHT COLUMN APPROACH FINAL
+   경력/자격증 오른쪽 덩어리 안에 APPROACH 배치
+========================= */
+
+/* APPROACH는 이제 별도 grid 섹션이 아니라 intro-right 안쪽 side-block으로 사용 */
+.approach-side-block {
+  margin-top: -6px;
+  margin-bottom: 0;
+}
+
+/* 오른쪽 컬럼의 선 길이와 맞도록 side-block 너비 100% 사용 */
+.approach-side-block .approach-block {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 430 / 300;
+  height: auto;
+
+  margin: 0;
+  transform: none;
+  overflow: visible;
+}
+
+/* 이미지 비율 유지 */
+.approach-side-block .vegetable-frame {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: center;
+
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 채소 프레임 위에 텍스트 얹기 */
+.approach-side-block .approach-content {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.approach-side-block .approach-content h2 {
+  position: absolute;
+  top: 4.5%;
+  left: 0;
+  right: 0;
+
+  margin: 0;
+  text-align: center;
+
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.approach-side-block .approach-content dl {
+  position: absolute;
+
+  top: 21%;
+  left: 13%;
+  right: 11%;
+  bottom: 9%;
+
+  margin: 0;
+  overflow: hidden;
+}
+
+.approach-side-block .approach-content dt {
+  margin: 0 0 4px;
+
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.05em;
+  word-break: keep-all;
+}
+
+.approach-side-block .approach-content dt:not(:first-of-type) {
+  margin-top: 7px;
+}
+
+.approach-side-block .approach-content dd {
+  margin: 0;
+
+  color: #666;
+  font-size: 10.5px;
+  line-height: 1.28;
+  letter-spacing: -0.055em;
+
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+/* 오른쪽 컬럼이 한 줄 아래로 내려가는 화면에서는 중앙 정렬 */
+@media (max-width: 920px) {
+  .approach-side-block .approach-block {
+    width: min(430px, 100%);
+    max-width: 430px;
+    margin: 0 auto;
+    transform: none;
+  }
+}
+
+@media (max-width: 430px) {
+  .approach-side-block .approach-content h2 {
+    font-size: 16px;
+  }
+
+  .approach-side-block .approach-content dl {
+    top: 20%;
+    left: 12%;
+    right: 10%;
+    bottom: 8%;
+  }
+
+  .approach-side-block .approach-content dt {
+    font-size: 11px;
+    line-height: 1.14;
+    margin-bottom: 3px;
+  }
+
+  .approach-side-block .approach-content dt:not(:first-of-type) {
+    margin-top: 5px;
+  }
+
+  .approach-side-block .approach-content dd {
+    font-size: 8.9px;
+    line-height: 1.18;
+  }
+}
+
+@media (max-width: 360px) {
+  .approach-side-block .approach-content h2 {
+    font-size: 14px;
+  }
+
+  .approach-side-block .approach-content dt {
+    font-size: 9.8px;
+  }
+
+  .approach-side-block .approach-content dd {
+    font-size: 7.8px;
+  }
+}
+
