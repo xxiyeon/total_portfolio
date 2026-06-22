@@ -1414,3 +1414,584 @@ body.is-intro-open {
   left: auto;
   bottom: auto;
 }
+
+
+/* =========================
+   RESPONSIVE PATCH
+   desktop / tablet / mobile
+========================= */
+
+/* 큰 노트북 이하 */
+@media (max-width: 1180px) {
+  .portfolio-page {
+    width: min(1000px, calc(100vw - 40px));
+    padding: 36px 48px 60px;
+  }
+
+  .folder-nav {
+    width: calc(100% + 96px);
+    margin: -67px -48px 0;
+    padding: var(--folder-top-space) 32px 0 48px;
+  }
+
+  .intro-section {
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: 42px;
+  }
+
+  .intro-right {
+    padding-top: 118px;
+  }
+
+  .speech-card {
+    width: 330px;
+    height: 162px;
+  }
+
+  .speech-content {
+    top: 22px;
+    left: 48px;
+    right: 26px;
+  }
+
+  .training-approach-grid {
+    grid-template-columns: minmax(0, 1fr) 400px;
+    gap: 28px;
+  }
+
+  .approach-block {
+    width: 400px;
+  }
+
+  .project-text {
+    width: calc(100% - 420px);
+  }
+
+  .project-image {
+    right: 22px;
+    width: 385px;
+  }
+}
+
+/* 태블릿 */
+@media (max-width: 920px) {
+  .page-wrap {
+    padding: 64px 0;
+  }
+
+  .portfolio-page {
+    width: calc(100vw - 32px);
+    padding: 34px 28px 56px;
+  }
+
+  .folder-nav {
+    --folder-top-space: 12px;
+
+    width: calc(100% + 56px);
+    height: 92px;
+    margin: -62px -28px 0;
+    padding: var(--folder-top-space) 24px 0 28px;
+    gap: 7px;
+  }
+
+  .folder-nav a {
+    min-width: 86px;
+    padding: 8px 18px 0;
+    font-size: 13px;
+  }
+
+  .intro-section {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .intro-right {
+    padding-top: 0;
+    padding-left: 0;
+  }
+
+  .profile-row {
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 44px;
+  }
+
+  .speech-card {
+    margin-left: 0;
+    width: min(360px, calc(100vw - 96px));
+  }
+
+  .training-approach-grid {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .approach-block {
+    width: min(430px, 100%);
+    margin: 0 auto;
+  }
+
+  .tech-section,
+  .projects-section {
+    margin-top: 88px;
+  }
+
+  .project-panel {
+    min-height: auto;
+    padding: 26px 24px 82px;
+  }
+
+  .green-project,
+  .blue-project {
+    min-height: auto;
+    padding-bottom: 82px;
+  }
+
+  .project-meta {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-bottom: 30px;
+  }
+
+  .project-label,
+  .project-date,
+  .project-links,
+  .project-type {
+    justify-self: start;
+  }
+
+  .project-text {
+    width: 100%;
+  }
+
+  .project-image,
+  .project-image-withday {
+    position: relative;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    transform: none;
+
+    width: min(440px, 100%);
+    max-width: 100%;
+    margin: 36px auto 0;
+  }
+
+  .project-image-withday img {
+    max-height: none;
+  }
+
+  .project-brush-link,
+  .project-brush-links {
+    left: 0;
+    bottom: -36px;
+  }
+
+  .used-table {
+    table-layout: auto;
+  }
+
+  .used-table th {
+    width: 118px;
+  }
+}
+
+/* 모바일 공통 */
+@media (max-width: 720px) {
+  body {
+    font-size: 15px;
+  }
+
+  .page-wrap {
+    padding: 42px 0;
+  }
+
+  .portfolio-page {
+    width: calc(100vw - 20px);
+    padding: 30px 18px 48px;
+  }
+
+  .folder-nav {
+    --folder-tab-height: 28px;
+    --folder-top-space: 10px;
+
+    width: calc(100% + 36px);
+    height: 82px;
+    margin: -58px -18px 0;
+    padding: var(--folder-top-space) 12px 0 12px;
+    gap: 4px;
+  }
+
+  .folder-nav a {
+    flex: 1 1 0;
+    min-width: 0;
+    height: var(--folder-tab-height);
+    padding: 8px 5px 0;
+
+    font-size: 10px;
+    letter-spacing: -0.03em;
+  }
+
+  .eyebrow {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: clamp(30px, 10vw, 38px);
+    line-height: 1;
+  }
+
+  .birth {
+    font-size: 14px;
+  }
+
+  .profile-row {
+    justify-content: center;
+  }
+
+  .avatar-box {
+    width: 132px;
+    height: 156px;
+  }
+
+  .avatar-box img {
+    width: 108px;
+    height: 108px;
+  }
+
+  .speech-card {
+    width: min(340px, 100%);
+    height: auto;
+    aspect-ratio: 360 / 176;
+  }
+
+  .speech-content {
+    top: 13%;
+    left: 15%;
+    right: 8%;
+  }
+
+  .speech-content p {
+    font-size: clamp(12px, 4vw, 16px);
+    margin-bottom: 4px;
+  }
+
+  .speech-links {
+    gap: 10px;
+  }
+
+  .speech-links a {
+    font-size: 13px;
+  }
+
+  .side-block {
+    margin-bottom: 54px;
+  }
+
+  .timeline-item,
+  .training-item {
+    grid-template-columns: 82px 1fr;
+    gap: 18px;
+  }
+
+  .timeline-item span,
+  .training-item span,
+  .timeline-item p,
+  .training-item p {
+    font-size: 13px;
+  }
+
+  .timeline-item strong,
+  .training-item strong {
+    font-size: 14.5px;
+  }
+
+  .about-section p {
+    font-size: 15px;
+    line-height: 1.72;
+  }
+
+  .skill-item {
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+
+  .skill-item span {
+    font-size: 15px;
+  }
+
+  .skill-bar {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .tech-section,
+  .projects-section {
+    margin-top: 72px;
+  }
+
+  .tech-list article {
+    padding: 14px 16px;
+  }
+
+  .tech-list h3 {
+    font-size: 14px;
+  }
+
+  .tech-list p {
+    font-size: 13.5px;
+  }
+
+  .project-panel {
+    margin-top: 40px;
+    padding: 24px 18px 82px;
+    background-size: 104px auto;
+  }
+
+  .project_font,
+  .project-label {
+    font-size: 18px;
+  }
+
+  .project-date,
+  .project-type {
+    font-size: 12px;
+  }
+
+  .project-text h3 {
+    font-size: clamp(30px, 10vw, 36px);
+  }
+
+  .project-subtitle {
+    margin: 20px 0 10px !important;
+    font-size: 14px;
+  }
+
+  .project-text p {
+    margin-bottom: 26px;
+    font-size: 13.5px;
+    line-height: 1.64;
+  }
+
+  .project-text h4 {
+    margin: 32px 0 12px;
+    font-size: 15px;
+  }
+
+  .project-text ul {
+    margin-bottom: 30px;
+    padding-left: 16px;
+    font-size: 13.5px;
+  }
+
+  .project-image,
+  .project-image-withday {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .project-brush-link {
+    min-width: 74px;
+    height: 28px;
+    padding: 7px 12px 6px;
+    font-size: 11px;
+  }
+
+  .project-brush-links {
+    gap: 6px;
+  }
+
+  .used-table {
+    font-size: 12.5px;
+  }
+
+  .used-table th {
+    width: 96px;
+    padding: 7px 0;
+  }
+
+  .used-table td {
+    padding: 7px 0;
+    white-space: normal;
+    word-break: keep-all;
+  }
+
+  .approach-block {
+    width: min(430px, 100%);
+  }
+
+  .approach-content h2 {
+    top: 2%;
+    left: 4%;
+    font-size: clamp(15px, 5vw, 19px);
+  }
+
+  .approach-content dl {
+    top: 19%;
+    left: 12%;
+    right: 10%;
+    bottom: 8%;
+  }
+
+  .approach-content dt {
+    font-size: clamp(11px, 3.5vw, 14px);
+    line-height: 1.22;
+  }
+
+  .approach-content dd {
+    font-size: clamp(9px, 2.8vw, 11.8px);
+    line-height: 1.35;
+  }
+
+  .footer {
+    margin-top: 72px;
+    padding-top: 34px;
+  }
+
+  .footer-tags {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* 작은 모바일 */
+@media (max-width: 430px) {
+  .portfolio-page {
+    width: calc(100vw - 14px);
+    padding: 28px 14px 44px;
+  }
+
+  .folder-nav {
+    width: calc(100% + 28px);
+    margin: -56px -14px 0;
+    padding: var(--folder-top-space) 8px 0 8px;
+    gap: 3px;
+  }
+
+  .folder-nav a {
+    font-size: 8.5px;
+    padding-top: 9px;
+  }
+
+  .profile-row {
+    display: grid;
+    justify-items: center;
+  }
+
+  .speech-card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .speech-links a {
+    font-size: 12px;
+  }
+
+  .timeline-item,
+  .training-item {
+    grid-template-columns: 74px 1fr;
+    gap: 14px;
+  }
+
+  .side-block h2,
+  .line-title,
+  .about-section h2,
+  .skills-section h2 {
+    font-size: 14px;
+  }
+
+  .project-panel {
+    padding: 22px 14px 78px;
+  }
+
+  .project-meta {
+    gap: 7px;
+  }
+
+  .project-text h3 {
+    font-size: 29px;
+  }
+
+  .project-text p,
+  .project-text ul {
+    font-size: 13px;
+  }
+
+  .used-table {
+    font-size: 11.5px;
+  }
+
+  .used-table th {
+    width: 86px;
+  }
+
+  .project-brush-link {
+    min-width: 68px;
+    height: 26px;
+    padding: 6px 10px;
+    font-size: 10.5px;
+  }
+
+  .project-brush-link .link-icon {
+    width: 12px;
+    height: 12px;
+  }
+
+  .project-brush-links {
+    bottom: -32px;
+  }
+
+  .approach-content dl {
+    top: 20%;
+    left: 11%;
+    right: 9%;
+    bottom: 7%;
+  }
+
+  .approach-content dt:not(:first-of-type) {
+    margin-top: 6px;
+  }
+
+  .intro-enter {
+    width: min(300px, 78vw);
+    height: min(230px, 58vw);
+  }
+
+  .intro-cursor {
+    width: 92px;
+    height: 92px;
+    right: -4px;
+    bottom: 18px;
+  }
+}
+
+/* 초소형 모바일 */
+@media (max-width: 360px) {
+  .folder-nav a {
+    font-size: 7.5px;
+  }
+
+  .timeline-item,
+  .training-item {
+    grid-template-columns: 68px 1fr;
+    gap: 12px;
+  }
+
+  .used-table {
+    font-size: 10.8px;
+  }
+
+  .used-table th {
+    width: 78px;
+  }
+
+  .project-brush-links {
+    gap: 4px;
+  }
+
+  .project-brush-link {
+    min-width: 64px;
+    padding-inline: 8px;
+  }
+}
+
