@@ -1310,3 +1310,68 @@ body.is-intro-open {
     height: 112px;
   }
 }
+.project-preview-link {
+  display: block;
+  cursor: pointer;
+}
+
+.project-preview-link img {
+  transition:
+    transform 0.28s ease,
+    opacity 0.28s ease;
+  transform-origin: center;
+}
+
+.project-preview-link:hover img {
+  transform: scale(0.96);
+  opacity: 0.92;
+}
+
+.project-brush-link {
+  position: absolute;
+  left: 0;
+  bottom: -36px;
+  z-index: 3;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  min-width: 78px;
+  height: 30px;
+  padding: 8px 14px 7px;
+
+  font-family: "Baloo Thambi 2", "Pretendard", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+
+  color: var(--ink);
+  white-space: nowrap;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.project-brush-link:hover {
+  transform: translateY(-1px) rotate(-1deg);
+  opacity: 0.86;
+}
+
+.project-brush-link .link-icon {
+  width: 13px;
+  height: 13px;
+}
+.green-project .project-brush-link {
+  background-image: url("./assets/brush-yellow.png");
+}
+
+.blue-project .project-brush-link {
+  background-image: url("./assets/brush-blue.png");
+}
