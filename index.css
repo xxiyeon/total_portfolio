@@ -310,7 +310,7 @@ h1 {
    SIDE INFO
 ========================= */
 .side-block {
-  margin-bottom: 62px;
+  margin-bottom: 80px;
 }
 .side-block:last-child {
   margin-bottom: 0;
@@ -486,6 +486,7 @@ h1 {
   height: auto;
   flex-shrink: 0;
   overflow: hidden;
+  margin-top: -6px;
 }
 
 .vegetable-frame {
@@ -507,50 +508,51 @@ h1 {
 
 .approach-content h2 {
   position: absolute;
-  top: 19px;
+  top: 21px; /*채소 제목 위치 맞추기*/
   left: 0;
   right: 0;
-  transform: none;
 
   margin: 0;
   text-align: center;
-  font-size: 18px;
-  font-weight: 700;
+
+  font-size: 19px;
+  font-weight: 800;
   line-height: 1;
   letter-spacing: -0.02em;
   white-space: nowrap;
 }
-
 .approach-content dl {
   position: absolute;
-  top: 78px;
+  top: 82px;
   left: 66px;
-  right: 60px;
-  bottom: 31px;
+  right: 58px;
+  bottom: 28px;
 
   margin: 0;
   overflow: hidden;
 }
 
 .approach-content dt {
-  margin: 0 0 3px;
-  font-size: 13.2px;
-  font-weight: 700;
-  line-height: 1.22;
-  letter-spacing: -0.03em;
+  margin: 0 0 5px;
+
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.035em;
   word-break: keep-all;
 }
 
 .approach-content dt:not(:first-of-type) {
-  margin-top: 7px;
+  margin-top: 10px;
 }
 
 .approach-content dd {
   margin: 0;
+
   color: #666;
-  font-size: 11px;
-  line-height: 1.32;
-  letter-spacing: -0.035em;
+  font-size: 11.8px;
+  line-height: 1.38;
+  letter-spacing: -0.04em;
   word-break: keep-all;
   overflow-wrap: break-word;
 }
