@@ -84,6 +84,7 @@ li {
 .folder-nav {
   --folder-tab-height: 30px;
   --folder-top-space: 15px;
+  --folder-bottom-space: 55px;
 
   position: sticky;
   top: 0;
@@ -95,15 +96,19 @@ li {
   gap: 10px;
 
   width: calc(100% + 128px);
-  height: calc(var(--folder-top-space) + var(--folder-tab-height));
+  height: calc(
+    var(--folder-top-space) + var(--folder-tab-height) +
+      var(--folder-bottom-space)
+  );
 
-  margin: -38px -64px 38px;
-  padding: var(--folder-top-space) 40px 0 64px;
+  margin: -69px -64px 0;
+  padding: var(--folder-top-space) 64px 0 64px;
 
   box-sizing: border-box;
   overflow: visible;
 
   background: var(--green-1);
+  border-bottom: var(--folder-bottom-space) solid var(--paper);
 
   pointer-events: none;
 }
@@ -130,6 +135,11 @@ li {
   clip-path: polygon(10% 0, 90% 0, 100% 100%, 0 100%);
 
   pointer-events: auto;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    opacity 0.2s ease;
 }
 
 .folder-nav a.is-active,
@@ -1221,9 +1231,8 @@ body.is-intro-open {
 
   .folder-nav {
     width: calc(100% + 96px);
-    height: calc(var(--folder-top-space) + var(--folder-tab-height));
-    margin: -36px -48px 38px;
-    padding: var(--folder-top-space) 32px 0 48px;
+    margin: -67px -48px 0;
+    padding: var(--folder-top-space) 48px 0 48px;
   }
 
   .intro-section {
@@ -1269,11 +1278,16 @@ body.is-intro-open {
 
   .folder-nav {
     --folder-top-space: 12px;
+    --folder-bottom-space: 50px;
 
     width: calc(100% + 56px);
-    height: calc(var(--folder-top-space) + var(--folder-tab-height));
-    margin: -34px -28px 36px;
-    padding: var(--folder-top-space) 24px 0 28px;
+    height: calc(
+      var(--folder-top-space) + var(--folder-tab-height) +
+        var(--folder-bottom-space)
+    );
+
+    margin: -62px -28px 0;
+    padding: var(--folder-top-space) 28px 0 28px;
     gap: 7px;
   }
 
@@ -1387,11 +1401,16 @@ body.is-intro-open {
   .folder-nav {
     --folder-tab-height: 28px;
     --folder-top-space: 10px;
+    --folder-bottom-space: 44px;
 
     width: calc(100% + 36px);
-    height: calc(var(--folder-top-space) + var(--folder-tab-height));
-    margin: -30px -18px 34px;
-    padding: var(--folder-top-space) 12px 0 12px;
+    height: calc(
+      var(--folder-top-space) + var(--folder-tab-height) +
+        var(--folder-bottom-space)
+    );
+
+    margin: -58px -18px 0;
+    padding: var(--folder-top-space) 18px 0 18px;
     gap: 4px;
   }
 
@@ -1619,9 +1638,8 @@ body.is-intro-open {
 
   .folder-nav {
     width: calc(100% + 28px);
-    height: calc(var(--folder-top-space) + var(--folder-tab-height));
-    margin: -28px -14px 32px;
-    padding: var(--folder-top-space) 8px 0 8px;
+    margin: -56px -14px 0;
+    padding: var(--folder-top-space) 14px 0 14px;
     gap: 3px;
   }
 
