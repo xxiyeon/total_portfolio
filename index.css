@@ -1415,7 +1415,6 @@ body.is-intro-open {
   bottom: auto;
 }
 
-
 /* =========================
    RESPONSIVE PATCH
    desktop / tablet / mobile
@@ -1994,4 +1993,98 @@ body.is-intro-open {
     padding-inline: 8px;
   }
 }
+/* =========================
+   MOBILE FIX PATCH
+========================= */
 
+/* 기본에서는 줄바꿈 숨김 */
+.eyebrow-br {
+  display: none;
+}
+
+/* 391px ~ 480px: 개발자, / 이시연으로 분리 */
+@media (min-width: 391px) and (max-width: 480px) {
+  .eyebrow {
+    max-width: 360px;
+    font-size: 15px;
+    line-height: 1.42;
+    word-break: keep-all;
+  }
+
+  .eyebrow-br-425 {
+    display: block;
+  }
+}
+
+/* 320px ~ 390px: 풀스택 / 개발자, 이시연으로 분리 */
+@media (max-width: 390px) {
+  .eyebrow {
+    max-width: 320px;
+    font-size: 14px;
+    line-height: 1.42;
+    word-break: keep-all;
+  }
+
+  .eyebrow-br-375 {
+    display: block;
+  }
+
+  .eyebrow-br-425 {
+    display: none;
+  }
+}
+
+/* 모바일에서 말풍선이 캐릭터 위로 오게 */
+@media (max-width: 720px) {
+  .profile-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .speech-card {
+    order: 1;
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .avatar-box {
+    order: 2;
+  }
+
+  .used-table th {
+    width: 92px;
+    padding-right: 12px;
+  }
+
+  .used-table td {
+    padding-left: 12px;
+  }
+}
+
+@media (max-width: 430px) {
+  .used-table th {
+    width: 78px;
+    padding-right: 10px;
+  }
+
+  .used-table td {
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .used-table {
+    font-size: 10.8px;
+  }
+
+  .used-table th {
+    width: 70px;
+    padding-right: 8px;
+  }
+
+  .used-table td {
+    padding-left: 8px;
+  }
+}
