@@ -774,17 +774,14 @@ h1 {
   object-fit: cover;
   object-position: top;
   display: block;
-  margin-bottom: 40px;
 }
-.project-image1 img {
-  width: 100%;
-  max-height: 540px;
-  object-fit: cover;
-  object-position: top;
-  display: block;
-  margin-bottom: 120px;
+
+/* 프로젝트2 WithDay 이미지만 따로 조정 */
+.project-image-withday {
+  bottom: 120px;
 }
-.blue-project .project-image img {
+
+.project-image-withday img {
   max-height: 430px;
 }
 
