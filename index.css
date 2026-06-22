@@ -758,16 +758,15 @@ h1 {
   font-size: 15px;
   font-weight: 700;
 }
-
 .project-text p {
-  margin: 0 0 22px;
+  margin: 0 0 34px;
   font-size: 14.5px;
   line-height: 1.68;
   word-break: keep-all;
 }
 
 .project-text h4 {
-  margin: 34px 0 12px;
+  margin: 42px 0 14px;
   font-size: 17px;
   font-weight: 700;
 }
@@ -775,11 +774,10 @@ h1 {
 .project-text ul {
   list-style: disc;
   padding-left: 18px;
-  margin-bottom: 28px;
+  margin-bottom: 38px;
   font-size: 14px;
   line-height: 1.62;
 }
-
 .project-text li {
   margin-bottom: 7px;
 }
@@ -815,15 +813,14 @@ h1 {
   vertical-align: middle;
   white-space: nowrap;
 }
-
 .project-image {
   position: absolute;
-  right: 28px;
+  right: 24px;
   top: 50%;
   bottom: auto;
-  transform: translateY(-42%);
+  transform: translateY(-50%);
 
-  width: 370px;
+  width: 410px;
   margin: 0;
   background: transparent;
   box-shadow: none;
@@ -832,11 +829,11 @@ h1 {
 .project-image-withday {
   top: 50%;
   bottom: auto;
-  transform: translateY(-48%);
+  transform: translateY(-50%);
 }
 
 .project-image-withday img {
-  max-height: 410px;
+  max-height: 440px;
 }
 
 /* =========================
@@ -1349,7 +1346,7 @@ body.is-intro-open {
 }
 .project-brush-link {
   position: absolute;
-  left: 6px;
+  left: 0;
   bottom: -34px;
   z-index: 3;
 
@@ -1390,8 +1387,8 @@ body.is-intro-open {
 }
 /* 프로젝트1만 높이 늘림 */
 .green-project {
-  min-height: 720px;
-  padding-bottom: 92px;
+  min-height: 760px;
+  padding-bottom: 104px;
 }
 .green-project .project-brush-link {
   background-image: url("./assets/brush-yellow.png");
@@ -1402,7 +1399,7 @@ body.is-intro-open {
 }
 .project-brush-links {
   position: absolute;
-  left: 6px;
+  left: 0;
   bottom: -34px;
   z-index: 3;
 
