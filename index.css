@@ -310,9 +310,11 @@ h1 {
    SIDE INFO
 ========================= */
 .side-block {
-  margin-bottom: 44px;
+  margin-bottom: 62px;
 }
-
+.side-block:last-child {
+  margin-bottom: 0;
+}
 .side-block h2,
 .line-title,
 .about-section h2,
@@ -330,7 +332,25 @@ h1 {
 .side-block h2 {
   margin-bottom: 20px;
 }
+.about-section p:last-child {
+  margin-bottom: 0;
+}
 
+.timeline-item {
+  margin-bottom: 30px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.training-item {
+  margin-bottom: 32px;
+}
+
+.training-item:last-child {
+  margin-bottom: 0;
+}
 .timeline-item,
 .training-item {
   display: grid;
@@ -367,12 +387,13 @@ h1 {
 ========================= */
 .about-section {
   margin-top: 0;
+  margin-bottom: 52px;
 }
 
 .about-section p {
-  margin: 0 0 14px;
+  margin: 0 0 18px;
   font-size: 17px;
-  line-height: 1.68;
+  line-height: 1.75;
   word-break: keep-all;
 }
 
@@ -382,9 +403,9 @@ h1 {
 }
 
 .skills-section {
-  margin-top: 38px;
+  margin-top: 0;
+  margin-bottom: 56px;
 }
-
 .skill-list {
   display: grid;
   gap: 12px;
@@ -590,19 +611,20 @@ h1 {
 
 .project-panel {
   position: relative;
-  margin-top: 52px;
-  padding: 20px 20px 26px;
+  margin-top: 64px;
+  padding: 28px 28px 76px;
+
   background-color: var(--green-4);
-  background-image: repeating-linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0.55) 0 20px,
-    transparent 20px 126px
-  );
-  min-height: 640px;
+  background-image: url("./assets/project-green.png");
+  background-repeat: repeat;
+  background-size: 126px auto;
+
+  min-height: 720px;
 }
 
 .blue-project {
   background-color: var(--blue-project);
+  background-image: url("./assets/project-blue.png");
 }
 
 .project-meta {
@@ -723,9 +745,8 @@ h1 {
 .project-text {
   width: calc(100% - 450px);
 }
-
 .project-text h3 {
-  margin: 0 0 4px;
+  margin: 0 0 10px;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 36px;
   font-weight: 500;
@@ -733,20 +754,20 @@ h1 {
 }
 
 .project-subtitle {
-  margin: 20px 0 8px !important;
+  margin: 24px 0 12px !important;
   font-size: 15px;
   font-weight: 700;
 }
 
 .project-text p {
-  margin: 0 0 14px;
+  margin: 0 0 22px;
   font-size: 14.5px;
-  line-height: 1.58;
+  line-height: 1.68;
   word-break: keep-all;
 }
 
 .project-text h4 {
-  margin: 24px 0 8px;
+  margin: 34px 0 12px;
   font-size: 17px;
   font-weight: 700;
 }
@@ -754,21 +775,18 @@ h1 {
 .project-text ul {
   list-style: disc;
   padding-left: 18px;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.62;
 }
 
 .project-text li {
-  margin-bottom: 3px;
+  margin-bottom: 7px;
 }
 
 .used-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 14px;
+  margin-top: 4px;
 }
-
 .used-table tr {
   border-top: 1.5px solid rgba(0, 0, 0, 0.75);
 }
@@ -790,20 +808,20 @@ h1 {
 
 .project-image {
   position: absolute;
-  right: 18px;
-  bottom: 18px;
-  width: 400px;
+  right: 28px;
+  bottom: 46px;
+  width: 370px;
   margin: 0;
   background: transparent;
   box-shadow: none;
 }
 /* 프로젝트2 WithDay 이미지만 따로 조정 */
 .project-image-withday {
-  bottom: 120px;
+  bottom: 92px;
 }
 
 .project-image-withday img {
-  max-height: 430px;
+  max-height: 410px;
 }
 
 /* =========================
@@ -1218,7 +1236,6 @@ body.is-intro-open {
   transform: scale(0.96);
   transition-duration: 0.12s;
 }
-
 .intro-logo {
   position: absolute;
   inset: 0;
@@ -1230,43 +1247,26 @@ body.is-intro-open {
   object-position: center;
 
   pointer-events: none;
-  transition: opacity 0.22s ease;
 }
 
 .intro-logo-default {
+  z-index: 1;
   opacity: 1;
 }
 
 .intro-logo-hover {
+  z-index: 2;
   opacity: 0;
-}
-
-.intro-cursor {
-  position: absolute;
-  right: -18px;
-  bottom: 18px;
-
-  width: 147px;
-  height: 147px;
-
-  object-fit: contain;
-  pointer-events: none;
-
-  opacity: 0;
-  transform: translate(8px, 8px);
-  transition:
-    opacity 0.22s ease,
-    transform 0.22s ease;
+  transition: opacity 0.16s ease;
 }
 
 .intro-enter:hover .intro-logo-default {
-  opacity: 0;
+  opacity: 1;
 }
 
 .intro-enter:hover .intro-logo-hover {
   opacity: 1;
 }
-
 .intro-enter:hover .intro-cursor {
   opacity: 1;
   transform: translate(0, 0);
@@ -1284,7 +1284,23 @@ body.is-intro-open {
   border-radius: 18px;
   pointer-events: none;
 }
+.intro-cursor {
+  position: absolute;
+  right: -18px;
+  bottom: 18px;
 
+  width: 147px;
+  height: 147px;
+
+  object-fit: contain;
+  pointer-events: none;
+
+  opacity: 0;
+  transform: translate(8px, 8px);
+  transition:
+    opacity 0.22s ease,
+    transform 0.22s ease;
+}
 @media (max-width: 640px) {
   .intro-enter {
     width: min(330px, 78vw);
@@ -1305,20 +1321,21 @@ body.is-intro-open {
 
 .project-preview-link img {
   transition:
-    transform 0.28s ease,
-    opacity 0.28s ease;
+    transform 0.24s ease,
+    opacity 0.24s ease,
+    filter 0.24s ease;
   transform-origin: center;
 }
 
 .project-preview-link:hover img {
-  transform: scale(0.96);
-  opacity: 0.92;
+  transform: scale(0.985);
+  opacity: 0.96;
+  filter: brightness(0.98);
 }
-
 .project-brush-link {
   position: absolute;
-  left: 0;
-  bottom: -36px;
+  left: 6px;
+  bottom: -34px;
   z-index: 3;
 
   display: inline-flex;
@@ -1343,8 +1360,18 @@ body.is-intro-open {
   background-size: 100% 100%;
 
   transition:
-    transform 0.2s ease,
-    opacity 0.2s ease;
+    transform 0.18s ease,
+    opacity 0.18s ease;
+}
+
+.project-brush-link:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+.project-brush-link .link-icon {
+  width: 13px;
+  height: 13px;
 }
 
 .project-brush-link:hover {
@@ -1362,4 +1389,20 @@ body.is-intro-open {
 
 .blue-project .project-brush-link {
   background-image: url("./assets/brush-blue.png");
+}
+.project-brush-links {
+  position: absolute;
+  left: 6px;
+  bottom: -34px;
+  z-index: 3;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.project-brush-links .project-brush-link {
+  position: relative;
+  left: auto;
+  bottom: auto;
 }
