@@ -97,7 +97,7 @@ li {
   width: calc(100% + 128px);
   height: 100px; /* 기존 92px에서 살짝 증가 */
   margin: -69px -64px 0; /* 기존 -61px에서 위로 더 당김 */
-  padding: var(--folder-top-space) 150px 0 64px;
+  padding: var(--folder-top-space) 48px 0 64px;
 
   box-sizing: border-box;
   isolation: isolate;
