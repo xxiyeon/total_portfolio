@@ -468,20 +468,19 @@ h1 {
 ========================= */
 .training-approach-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 430px;
+  grid-template-columns: minmax(0, 1fr) minmax(430px, 1fr);
   gap: 34px;
   margin-top: 58px;
   align-items: start;
 }
-
 .training-block {
   min-width: 0;
 }
-
 .approach-block {
   position: relative;
 
-  width: 430px;
+  width: 100%;
+  max-width: none;
   aspect-ratio: 430 / 300;
   height: auto;
 
@@ -1048,7 +1047,9 @@ h1 {
 
   .approach-block {
     width: 100%;
-    max-width: 430px;
+    max-width: 520px;
+    margin: 0 auto;
+    aspect-ratio: 430 / 300;
   }
 
   .project-meta {
@@ -1823,7 +1824,9 @@ body.is-intro-open {
   }
 
   .approach-block {
-    width: min(430px, 100%);
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 430 / 300;
   }
 
   .approach-content h2 {
