@@ -327,7 +327,15 @@ h1 {
   font-weight: 700;
   letter-spacing: 0.1px;
 }
+.side-block-only h2 {
+  margin: 0 0 18px;
+  padding-bottom: 8px;
 
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0.1px;
+}
 .side-block h2 {
   margin-bottom: 20px;
 }
@@ -1930,7 +1938,7 @@ body.is-intro-open {
   margin-top: -2px;
   margin-bottom: 0;
 
-  transform: translateY(150px);
+  transform: translateY(50px);
 }
 
 /* 오른쪽 섹션 너비 100% 사용 */
