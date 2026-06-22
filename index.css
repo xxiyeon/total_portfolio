@@ -761,10 +761,8 @@ h1 {
   position: absolute;
   right: 18px;
   bottom: 18px;
-
   width: 400px;
   margin: 0;
-
   background: transparent;
   box-shadow: none;
 }
@@ -775,8 +773,16 @@ h1 {
   object-fit: cover;
   object-position: top;
   display: block;
+  margin-bottom: 40px;
 }
-
+.project-image1 img {
+  width: 100%;
+  max-height: 540px;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  margin-bottom: 120px;
+}
 .blue-project .project-image img {
   max-height: 430px;
 }
