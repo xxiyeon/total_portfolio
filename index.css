@@ -2094,3 +2094,46 @@ body.is-intro-open {
     font-size: 7.8px;
   }
 }
+/* =========================
+   FOLDER NAV SEAM FIX
+========================= */
+
+.folder-nav {
+  background: var(--paper);
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* 초록색 영역을 gradient가 아니라 별도 레이어로 분리 */
+.folder-nav::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+
+  height: calc(var(--folder-top-space) + var(--folder-tab-height) - 2px);
+
+  background: var(--green-1);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* 초록/흰색 경계 부분을 흰색으로 2px 덮어서 깜빡임 제거 */
+.folder-nav::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(var(--folder-top-space) + var(--folder-tab-height) - 2px);
+
+  height: 4px;
+
+  background: var(--paper);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.folder-nav a {
+  z-index: 2;
+}
