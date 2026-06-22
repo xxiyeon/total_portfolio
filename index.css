@@ -2083,6 +2083,9 @@ body.is-intro-open {
     font-size: 8.9px;
     line-height: 1.18;
   }
+  .speech-bubble-img {
+    content: url("./assets/speech-bubble-mobile.png");
+  }
 }
 
 @media (max-width: 360px) {
