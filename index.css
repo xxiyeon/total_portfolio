@@ -611,7 +611,6 @@ h1 {
 .projects-section {
   margin-top: 124px;
 }
-
 .project-panel {
   position: relative;
   margin-top: 64px;
@@ -622,12 +621,17 @@ h1 {
   background-repeat: repeat;
   background-size: 126px auto;
 
-  min-height: 720px;
+  min-height: 640px;
 }
 
 .blue-project {
+  min-height: 640px;
+  padding-bottom: 64px;
+
   background-color: var(--blue-project);
   background-image: url("./assets/project-blue.png");
+  background-repeat: repeat;
+  background-size: 126px auto;
 }
 
 .project-meta {
@@ -779,10 +783,15 @@ h1 {
 .project-text li {
   margin-bottom: 7px;
 }
-
 .used-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
   margin-top: 4px;
+
+  font-size: 14px;
 }
+
 .used-table tr {
   border-top: 1.5px solid rgba(0, 0, 0, 0.75);
 }
@@ -792,28 +801,38 @@ h1 {
 }
 
 .used-table th {
-  width: 112px;
+  width: 128px;
   padding: 7px 0;
   text-align: left;
   font-weight: 500;
+  vertical-align: middle;
+  white-space: nowrap;
 }
 
 .used-table td {
   padding: 7px 0;
+  text-align: left;
+  vertical-align: middle;
+  white-space: nowrap;
 }
 
 .project-image {
   position: absolute;
   right: 28px;
-  bottom: 46px;
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-42%);
+
   width: 370px;
   margin: 0;
   background: transparent;
   box-shadow: none;
 }
-/* 프로젝트2 WithDay 이미지만 따로 조정 */
+
 .project-image-withday {
-  bottom: 92px;
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-48%);
 }
 
 .project-image-withday img {
@@ -1284,7 +1303,7 @@ body.is-intro-open {
   position: absolute;
   right: -18px;
   bottom: 18px;
-
+  z-index: 3;
   width: 147px;
   height: 147px;
 
@@ -1368,6 +1387,11 @@ body.is-intro-open {
 .project-brush-link .link-icon {
   width: 13px;
   height: 13px;
+}
+/* 프로젝트1만 높이 늘림 */
+.green-project {
+  min-height: 720px;
+  padding-bottom: 92px;
 }
 .green-project .project-brush-link {
   background-image: url("./assets/brush-yellow.png");
