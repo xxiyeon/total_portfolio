@@ -107,7 +107,7 @@ navLinks.forEach((link) => {
 
 const revealTargets = [
   ".intro-section",
-  ".training-approach-grid",
+  ".intro-right",
   ".tech-section",
   ".project-panel",
   ".footer",

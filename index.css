@@ -464,110 +464,11 @@ h1 {
 }
 
 /* =========================
-  EDUCATION + APPROACH
+   EDUCATION & TRAINING
 ========================= */
-.training-approach-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(430px, 1fr);
-  gap: 34px;
-  margin-top: 58px;
-  align-items: start;
-}
 .training-block {
   min-width: 0;
-}
-.approach-block {
-  position: relative;
-
-  width: 100%;
-  max-width: 400px;
-  aspect-ratio: 430 / 300;
-  height: auto;
-
-  flex-shrink: 0;
-  overflow: visible;
-
-  margin-top: -6px;
-  margin-left: auto;
-  margin-right: 0;
-}
-
-.vegetable-frame {
-  position: absolute;
-  inset: 0;
-
-  width: 100%;
-  height: 100%;
-
-  object-fit: contain;
-  object-position: center;
-
-  pointer-events: none;
-  z-index: 0;
-}
-
-.approach-content {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  padding: 0;
-}
-
-.approach-content h2 {
-  position: absolute;
-  top: 4%;
-  left: 0;
-  right: 0;
-
-  margin: 0;
-  text-align: center;
-
-  font-size: 19px;
-  font-weight: 800;
-  line-height: 1;
-  letter-spacing: -0.02em;
-  white-space: nowrap;
-}
-.approach-content dl {
-  position: absolute;
-
-  top: 21%;
-  left: 13%;
-  right: 11%;
-  bottom: 9%;
-
-  margin: 0;
-  overflow: visible;
-}
-
-.approach-content dt {
-  margin: 0 0 5px;
-
-  font-size: 14px;
-  font-weight: 800;
-  line-height: 1.25;
-  letter-spacing: -0.035em;
-  word-break: keep-all;
-}
-
-.approach-content dt:not(:first-of-type) {
-  margin-top: 10px;
-}
-
-.approach-content dd {
-  margin: 0;
-
-  color: #666;
-  font-size: 11.4px;
-  line-height: 1.38;
-  letter-spacing: -0.04em;
-
-  word-break: keep-all;
-  overflow-wrap: anywhere;
-}
-
-.approach-content dd:last-child {
-  margin-bottom: 0;
+  margin-top: 58px;
 }
 
 /* =========================
@@ -978,10 +879,6 @@ h1 {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M12%20.5C5.65.5.5%205.65.5%2012c0%205.08%203.29%209.39%207.86%2010.91.58.11.79-.25.79-.56v-2.02c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7%201.15.08%201.75%201.18%201.75%201.18%201.02%201.75%202.68%201.24%203.33.95.1-.74.4-1.24.72-1.53-2.56-.29-5.25-1.28-5.25-5.69%200-1.26.45-2.29%201.18-3.1-.12-.29-.51-1.47.11-3.06%200%200%20.96-.31%203.16%201.18A10.9%2010.9%200%200%201%2012%206.12c.98%200%201.96.13%202.88.39%202.19-1.49%203.15-1.18%203.15-1.18.63%201.59.24%202.77.12%203.06.74.81%201.18%201.84%201.18%203.1%200%204.42-2.7%205.39-5.27%205.68.41.36.77%201.06.77%202.14v3.17c0%20.31.21.68.8.56A11.51%2011.51%200%200%200%2023.5%2012C23.5%205.65%2018.35.5%2012%20.5Z%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.external-icon {
-  mask-image: url("data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M7%2017L17%207M9%207H17V15%22%20stroke%3D%22black%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E");
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M7%2017L17%207M9%207H17V15%22%20stroke%3D%22black%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E");
-}
 
 .notion-icon {
   mask-image: url("data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Crect%20x%3D%224%22%20y%3D%224%22%20width%3D%2216%22%20height%3D%2216%22%20rx%3D%221.5%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222%22%2F%3E%3Cpath%20d%3D%22M9%2017V7L15%2017V7%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E");
@@ -1019,110 +916,6 @@ h1 {
     opacity: 1;
     transform: none;
     transition: none;
-  }
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 920px) {
-  .portfolio-page {
-    padding: 36px 28px 56px;
-  }
-
-  .folder-nav {
-    width: calc(100% + 56px);
-    margin: -61px -28px 0;
-    padding: 0 60px 0 28px;
-  }
-
-  .intro-section,
-  .training-approach-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .intro-right {
-    padding-top: 24px;
-    padding-left: 0;
-  }
-
-  .training-approach-grid {
-    gap: 36px;
-  }
-
-  .approach-block {
-    width: 100%;
-    max-width: 520px;
-    margin: 0 auto;
-    aspect-ratio: 430 / 300;
-  }
-
-  .project-meta {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
-  .project-label,
-  .project-date,
-  .project-links {
-    justify-self: start;
-  }
-
-  .project-links {
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    min-width: 0;
-  }
-
-  .project-text {
-    width: 100%;
-  }
-
-  .project-image {
-    position: relative;
-    width: 100%;
-    max-width: 400px;
-    margin-top: 30px;
-  }
-
-  .project-panel {
-    min-height: auto;
-  }
-}
-
-@media (max-width: 640px) {
-  .page-wrap {
-    padding: 36px 0;
-  }
-
-  .portfolio-page {
-    width: calc(100vw - 24px);
-    padding: 32px 20px 48px;
-  }
-
-  .folder-nav {
-    --folder-tab-height: 30px;
-
-    justify-content: center;
-    gap: 6px;
-
-    width: calc(100% + 40px);
-    height: 82px;
-    margin: -57px -20px 0;
-    padding: 0 20px;
-
-    background: linear-gradient(
-      to bottom,
-      var(--green-1) 0 var(--folder-tab-height),
-      var(--paper) var(--folder-tab-height) 100%
-    );
-  }
-
-  .folder-nav a {
-    min-width: 96px;
-    height: 30px;
-    padding: 8px 12px 0;
-    font-size: 9px;
   }
 }
 
@@ -1466,11 +1259,6 @@ body.is-intro-open {
     right: 26px;
   }
 
-  .training-approach-grid {
-    grid-template-columns: minmax(0, 1fr) 400px;
-    gap: 28px;
-  }
-
   .approach-block {
     width: 400px;
   }
@@ -1531,11 +1319,6 @@ body.is-intro-open {
   .speech-card {
     margin-left: 0;
     width: min(360px, calc(100vw - 96px));
-  }
-
-  .training-approach-grid {
-    grid-template-columns: 1fr;
-    gap: 44px;
   }
 
   .approach-block {
@@ -2115,205 +1898,44 @@ body.is-intro-open {
 }
 
 /* =========================
-   APPROACH LINE MATCH FIX
-   위쪽 솔리드 라인 너비에 맞추고, 이미지 비율 유지
+   CLEAN INTRO / RIGHT COLUMN
 ========================= */
 
-/* 오른쪽 컬럼 자체를 430px 고정이 아니라 실제 영역에 맞춤 */
-.training-approach-grid {
-  grid-template-columns: minmax(0, 1fr) minmax(410px, 1fr);
+/* 왼쪽: 프로필/소개/스킬/교육, 오른쪽: 학력/경력/자격증/APPROACH */
+.intro-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 410px;
+  gap: 56px;
+  align-items: stretch;
 }
 
-/* 채소 울타리: 위 CERTIFICATIONS/본문 선 끝에 맞게 꽉 사용 */
-.approach-block {
+.intro-left {
+  min-width: 0;
+}
+
+.intro-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   width: 100%;
-  max-width: none;
-  aspect-ratio: 430 / 300;
-  margin-left: 0;
-  margin-right: 0;
-  overflow: visible;
+  min-width: 0;
+
+  padding-top: 0;
+  padding-left: 10px;
 }
 
-/* 이미지 비율 유지: 절대 fill 금지 */
-.vegetable-frame {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-}
-
-/* 텍스트 크기는 줄이지 않고, 내부 영역만 안정적으로 확보 */
-.approach-content h2 {
-  top: 4%;
-  left: 0;
-  right: 0;
-  font-size: 19px;
-  line-height: 1;
-}
-
-.approach-content dl {
-  top: 21%;
-  left: 13%;
-  right: 11%;
-  bottom: 9%;
-  overflow: hidden;
-}
-
-.approach-content dt {
-  margin-bottom: 5px;
-  font-size: 14px;
-  line-height: 1.2;
-  letter-spacing: -0.04em;
-}
-
-.approach-content dt:not(:first-of-type) {
-  margin-top: 8px;
-}
-
-.approach-content dd {
-  font-size: 11.4px;
-  line-height: 1.34;
-  letter-spacing: -0.04em;
-  word-break: keep-all;
-  overflow-wrap: anywhere;
-}
-
-/* 태블릿/모바일에서도 위 선과 같은 너비로 */
-@media (max-width: 920px) {
-  .training-approach-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .approach-block {
-    width: 100%;
-    max-width: none;
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .approach-content h2 {
-    font-size: 19px;
-  }
-
-  .approach-content dl {
-    top: 21%;
-    left: 13%;
-    right: 11%;
-    bottom: 9%;
-    overflow: hidden;
-  }
-
-  .approach-content dt {
-    font-size: 14px;
-    line-height: 1.2;
-  }
-
-  .approach-content dd {
-    font-size: 11.4px;
-    line-height: 1.34;
-  }
-}
-
-/* 425px / 375px */
-@media (max-width: 430px) {
-  .approach-block {
-    width: 100%;
-    max-width: none;
-  }
-
-  .approach-content h2 {
-    top: 4%;
-    font-size: 19px;
-  }
-
-  .approach-content dl {
-    top: 21%;
-    left: 13%;
-    right: 11%;
-    bottom: 9%;
-  }
-
-  .approach-content dt {
-    font-size: 14px;
-    line-height: 1.16;
-    margin-bottom: 3px;
-  }
-
-  .approach-content dt:not(:first-of-type) {
-    margin-top: 5px;
-  }
-
-  .approach-content dd {
-    font-size: 11.4px;
-    line-height: 1.18;
-  }
-}
-
-/* 320px만 최소한으로 줄 간격만 압축 */
-@media (max-width: 360px) {
-  .approach-content h2 {
-    font-size: 18px;
-  }
-
-  .approach-content dt {
-    font-size: 13px;
-    line-height: 1.12;
-  }
-
-  .approach-content dd {
-    font-size: 10.4px;
-    line-height: 1.12;
-  }
-}
-/* APPROACH 위치 조정 */
-.approach-block {
-  width: 470px;
-  max-width: 470px;
-
-  margin-left: auto;
-  margin-right: 0;
-  aspect-ratio: 430 / 300;
-
-  transform: translate(24px, -12px);
-}
-@media (max-width: 920px) {
-  .approach-block {
-    width: min(470px, 100%);
-    max-width: 470px;
-
-    margin-left: auto;
-    margin-right: auto;
-
-    transform: translate(0, -12px);
-  }
-}
-
-@media (max-width: 430px) {
-  .approach-block {
-    width: 100%;
-    max-width: 100%;
-
-    margin-left: auto;
-    margin-right: auto;
-
-    transform: translate(0, -8px);
-  }
-}
-
-/* =========================
-   RIGHT COLUMN APPROACH FINAL
-   경력/자격증 오른쪽 덩어리 안에 APPROACH 배치
-========================= */
-
-/* APPROACH는 이제 별도 grid 섹션이 아니라 intro-right 안쪽 side-block으로 사용 */
+/* 오른쪽 마지막 채소 프레임 섹션 */
 .approach-side-block {
-  margin-top: -6px;
+  width: 100%;
+  margin-top: -2px;
   margin-bottom: 0;
 }
 
-/* 오른쪽 컬럼의 선 길이와 맞도록 side-block 너비 100% 사용 */
+/* 오른쪽 섹션 너비 100% 사용 */
 .approach-side-block .approach-block {
   position: relative;
+
   width: 100%;
   max-width: 100%;
   aspect-ratio: 430 / 300;
@@ -2324,7 +1946,6 @@ body.is-intro-open {
   overflow: visible;
 }
 
-/* 이미지 비율 유지 */
 .approach-side-block .vegetable-frame {
   position: absolute;
   inset: 0;
@@ -2339,7 +1960,6 @@ body.is-intro-open {
   z-index: 0;
 }
 
-/* 채소 프레임 위에 텍스트 얹기 */
 .approach-side-block .approach-content {
   position: absolute;
   inset: 0;
@@ -2400,13 +2020,33 @@ body.is-intro-open {
   overflow-wrap: anywhere;
 }
 
-/* 오른쪽 컬럼이 한 줄 아래로 내려가는 화면에서는 중앙 정렬 */
+/* 태블릿 이하에서는 좌우 섹션을 세로로 쌓음 */
 @media (max-width: 920px) {
+  .intro-section {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .intro-right {
+    padding-top: 0;
+    padding-left: 0;
+    justify-content: flex-start;
+  }
+
+  .training-block {
+    margin-top: 50px;
+  }
+
   .approach-side-block .approach-block {
     width: min(430px, 100%);
     max-width: 430px;
     margin: 0 auto;
-    transform: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .training-block {
+    margin-top: 44px;
   }
 }
 
