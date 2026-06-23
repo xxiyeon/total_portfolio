@@ -250,7 +250,7 @@ h1 {
 }
 
 .speech-content p {
-  margin: 0 0 7px;
+  margin: 5px;
   font-size: 18px;
   font-weight: 500;
   line-height: 1.22;
@@ -260,8 +260,8 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
-  margin-top: 6px;
+  gap: 15px;
+  margin-top: 20px;
 }
 
 .speech-links a {
