@@ -128,12 +128,12 @@ li {
   font-size: 16px;
   line-height: 1;
 
-  color: var(--green-1);
-  background: var(--paper);
+  color: var(--ink);
+  background: var(--active-tab);
 
   border-radius: 8px 8px 0 0;
   clip-path: polygon(10% 0, 90% 0, 100% 100%, 0 100%);
-
+  transform: translateY(1px);
   pointer-events: auto;
   transition:
     background-color 0.2s ease,
@@ -145,7 +145,7 @@ li {
 .folder-nav a.is-active,
 .folder-nav a:hover {
   color: var(--ink);
-  background: var(--active-tab);
+  background: var(--paper);
 }
 /* =========================
    INTRO

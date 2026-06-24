@@ -42,8 +42,14 @@ const easeInOutCubic = (progress) => {
     ? 4 * progress * progress * progress
     : 1 - Math.pow(-2 * progress + 2, 3) / 2;
 };
+let isNavScrolling = false;
+let activeScrollFrame = null;
 
-const smoothScrollTo = (targetY, duration = 950) => {
+const smoothScrollTo = (targetY, duration = 950, onDone) => {
+  if (activeScrollFrame) {
+    cancelAnimationFrame(activeScrollFrame);
+  }
+
   const startY = window.scrollY;
   const distance = targetY - startY;
   const startTime = performance.now();
@@ -56,11 +62,18 @@ const smoothScrollTo = (targetY, duration = 950) => {
     window.scrollTo(0, startY + distance * easedProgress);
 
     if (progress < 1) {
-      requestAnimationFrame(animateScroll);
+      activeScrollFrame = requestAnimationFrame(animateScroll);
+      return;
+    }
+
+    activeScrollFrame = null;
+
+    if (typeof onDone === "function") {
+      onDone();
     }
   };
 
-  requestAnimationFrame(animateScroll);
+  activeScrollFrame = requestAnimationFrame(animateScroll);
 };
 
 const activateNav = (id) => {
@@ -70,6 +83,7 @@ const activateNav = (id) => {
 };
 
 const updateActiveNav = () => {
+  if (isNavScrolling) return;
   const currentY = window.scrollY + 8;
   const techTop = getScrollTop("tech-stack");
   const projectsTop = getScrollTop("projects");
@@ -100,8 +114,13 @@ navLinks.forEach((link) => {
     const id = getSectionId(link);
     const targetY = getScrollTop(id);
 
-    smoothScrollTo(targetY, 950);
+    isNavScrolling = true;
     activateNav(id);
+
+    smoothScrollTo(targetY, 950, () => {
+      isNavScrolling = false;
+      activateNav(id);
+    });
   });
 });
 
